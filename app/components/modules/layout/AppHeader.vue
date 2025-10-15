@@ -1,38 +1,11 @@
 <template>
-  <header class="bg-[#1A3635] text-white absolute w-full z-50">
+  <header :class="!isScrolled?['text-white fixed w-full z-50 bg-[#1A3635]/80']:['text-white fixed w-full z-[100] bg-[#1A3635]']">
     <div class="container mx-auto px-6">
       <div class="flex items-center justify-between h-20">
         <div class="flex items-center">
-          <div class="flex items-center">
-            <div class="mr-4">
-              <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
-                <path
-                  d="M16 4L20 8L16 12L12 8L16 4Z"
-                  fill="#9CCC3B"
-                  stroke="#9CCC3B"
-                  stroke-width="2"
-                />
-                <path
-                  d="M16 12L20 16L16 20L12 16L16 12Z"
-                  fill="#9CCC3B"
-                  stroke="#9CCC3B"
-                  stroke-width="2"
-                />
-                <path
-                  d="M16 20L20 24L16 28L12 24L16 20Z"
-                  fill="#9CCC3B"
-                  stroke="#9CCC3B"
-                  stroke-width="2"
-                />
-                <circle cx="16" cy="6" r="2" fill="white" />
-              </svg>
-            </div>
-            <div class="text-white">
-              <div class="text-lg font-bold uppercase">Grow</div>
-              <div class="text-lg font-bold uppercase text-[#9CCC3B]">One</div>
-              <div class="text-lg font-bold uppercase">Future</div>
-            </div>
-          </div>
+          <NuxtLink to="/">
+            <img src="../../../assets/logo.png" alt="">
+          </NuxtLink>
         </div>
 
         <nav class="hidden lg:flex items-center space-x-8">
@@ -154,6 +127,7 @@
 
 <script setup lang="ts">
 const isMobileMenuOpen = ref(false);
+const isScrolled = ref(false);
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
@@ -162,4 +136,14 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0; // Đổi màu khi cuộn xuống (scrollY > 0)
+};
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>

@@ -232,7 +232,7 @@ definePageMeta({
                 loading="lazy"
               />
               <div
-                class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.3)_30%,rgba(255,255,255,0.1)_70%,rgba(255,255,255,0)_100%)]"
+                class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.3)_30%,rgba(255,255,255,0.1)_90%,rgba(255,255,255,0)_100%)]"
               ></div>
             </div>
           </div>
@@ -666,7 +666,7 @@ definePageMeta({
         </div>
         <!-- card -->
         <div
-          class="w-full relative flex items-center gap-4 border border-black justify-between"
+          class="w-full relative flex items-center gap-4 justify-between"
         >
           <button
             class="h-11 w-10 rounded-md flex items-center justify-center shadow-lg"
