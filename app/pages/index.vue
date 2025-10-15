@@ -122,71 +122,90 @@ definePageMeta({
       </div>
     </div>
     <!-- section-2 -->
-    <div class="container mx-auto px-4 py-12 flex gap-4 items-center">
-      <div class="w-1/2 flex justify-center items-center relative">
-        <img
-          src="../assets/vetinh1.png"
-          alt="vetinh1"
-          class="absolute w-[43px] h-[43px] top-[70px] left-[120px]"
-        />
-        <img
-          src="../assets/vetinh2.png"
-          alt="vetinh2"
-          class="absolute w-[43px] h-[43px] top-[450px] right-[120px]"
-        />
-        <div>
-          <img src="../assets/Earth.png" alt="earth" />
-        </div>
-        <div class="absolute w-[90%] h-full flex justify-between items-center">
-          <button
-            class="w-11 h-11 rounded-full bg-[#ffffff] border-none grid place-items-center hover:bg-[#92C73E]"
-          >
-            <img src="../assets/left_icon.png" alt="left" />
-          </button>
-          <button
-            class="w-11 h-11 rounded-full bg-[#ffffff] border-none grid place-items-center hover:bg-[#92C73E]"
-          >
-            <img src="../assets/right_icon.png" alt="right" />
-          </button>
-        </div>
-      </div>
-      <div class="h-[500px] w-1/2 flex items-start gap-8 flex-col">
-        <div class="w-full flex items-start gap-2 flex-col">
-          <p class="text-sm text-[#94C93D] uppercase">Who we are</p>
-          <h3 class="font-bold text-6xl uppercase leading-[100%]">
-            Global Nonprofit Growing Forests, Livelihoods, and Climate Solutions
-          </h3>
-        </div>
-        <p class="text-[#475467] text-base font-normal">
-          We are a global nonprofit with a threefold mission: restore forests,
-          empower communities with sustainable livelihoods, and drive lasting
-          climate solutions. Every tree we plant is part of a future we grow
-          together.
-        </p>
-        <div class="w-full flex items-start gap-4">
-          <div class="flex gap-2">
-            <button
-              class="w-7 h-7 rounded-full flex items-center justify-center border-none outline-none bg-[#92C73E]"
-            >
-              <img src="../assets/right_icon.png" alt="" />
-            </button>
-            <span class="text-base font-semibold">Out Impact</span>
+    <div class="relative">
+      <img
+        src="../assets/Section 9.png"
+        alt=""
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      <div
+        class="container mx-auto px-4 pt-[160px] pb-[295px] flex gap-4 items-center border border-black"
+      >
+        <div class="w-1/2 flex justify-center items-center relative">
+          <img
+            src="../assets/vetinh1.png"
+            alt="vetinh1"
+            class="absolute w-[43px] h-[43px] top-[70px] left-[120px]"
+          />
+          <img
+            src="../assets/vetinh2.png"
+            alt="vetinh2"
+            class="absolute w-[43px] h-[43px] top-[450px] right-[120px]"
+          />
+          <div>
+            <img src="../assets/Earth.png" alt="earth" />
           </div>
-          <div class="flex gap-2">
+          <div
+            class="absolute w-[90%] h-full flex justify-between items-center"
+          >
             <button
-              class="w-7 h-7 rounded-full flex items-center justify-center border-none outline-none bg-[#92C73E]"
+              class="w-11 h-11 rounded-full bg-[#ffffff] border-none grid place-items-center hover:bg-[#92C73E]"
             >
-              <img src="../assets/right_icon.png" alt="" />
+              <img src="../assets/left_icon.png" alt="left" />
             </button>
-            <span class="text-base font-semibold">About Us</span>
+            <button
+              class="w-11 h-11 rounded-full bg-[#ffffff] border-none grid place-items-center hover:bg-[#92C73E]"
+            >
+              <img src="../assets/right_icon.png" alt="right" />
+            </button>
+          </div>
+        </div>
+        <div
+          class="h-[500px] w-1/2 flex items-start gap-8 flex-col relative z-20"
+        >
+          <div class="w-full flex items-start gap-2 flex-col">
+            <p class="text-sm text-[#94C93D] uppercase">Who we are</p>
+            <h3 class="font-bold text-6xl uppercase leading-[100%]">
+              Global Nonprofit Growing Forests, Livelihoods, and Climate
+              Solutions
+            </h3>
+          </div>
+          <p class="text-[#475467] text-base font-normal">
+            We are a global nonprofit with a threefold mission: restore forests,
+            empower communities with sustainable livelihoods, and drive lasting
+            climate solutions. Every tree we plant is part of a future we grow
+            together.
+          </p>
+          <div class="w-full flex items-start gap-4">
+            <div class="flex gap-2">
+              <button
+                class="w-7 h-7 rounded-full flex items-center justify-center border-none outline-none bg-[#92C73E]"
+              >
+                <img src="../assets/right_icon.png" alt="" />
+              </button>
+              <span class="text-base font-semibold">Out Impact</span>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="w-7 h-7 rounded-full flex items-center justify-center border-none outline-none bg-[#92C73E]"
+              >
+                <img src="../assets/right_icon.png" alt="" />
+              </button>
+              <span class="text-base font-semibold">About Us</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- section-3 -->
-    <div class="bg-[#143A35]">
+    <div class="relative">
+      <img
+        src="../assets/Section 3.png"
+        alt=""
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      />
       <div
-        class="container mx-auto px-4 py-12 flex flex-col gap-16 items-center h-auto"
+        class="container mx-auto px-4 py-12 flex flex-col gap-16 items-center h-auto relative z-20"
       >
         <div class="w-full flex flex-col items-center justify-center gap-2">
           <p class="text-sm text-[#94C93D] uppercase">our pillars</p>
@@ -331,72 +350,82 @@ definePageMeta({
       </div>
     </div>
     <!-- section-4 -->
-    <div class="container mx-auto px-4 py-12 flex gap-4 items-center flex-col">
-      <div class="flex items-start flex-col gap-4">
+    <div class="relative">
+      <img
+        src="../assets/Section 4.png"
+        alt=""
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      <div
+        class="container mx-auto px-4 pt-[100px] pb-[164px] flex gap-4 items-center flex-col relative z-20"
+      >
         <div class="flex items-start flex-col gap-4">
-          <p class="text-sm text-[#94C93D] uppercase">why this work</p>
-          <h3 class="text-6xl font-bold">
-            Restore Nature. grow prosperity. fight climate change.
-          </h3>
+          <div class="flex items-start flex-col gap-4">
+            <p class="text-sm text-[#94C93D] uppercase">why this work</p>
+            <h3 class="text-6xl font-bold">
+              Restore Nature. grow prosperity. fight climate change.
+            </h3>
+          </div>
+          <p class="text-base text-[#475467] max-w-[844px]">
+            Forests are where nature, people, and climate meet. With local
+            communities, we restore ecosystem, create fair livelihoods, and
+            build resilience to heat and floods
+          </p>
         </div>
-        <p class="text-base text-[#475467] max-w-[844px]">
-          Forests are where nature, people, and climate meet. With local
-          communities, we restore ecosystem, create fair livelihoods, and build
-          resilience to heat and floods
-        </p>
-      </div>
 
-      <div class="w-full flex gap-8">
-        <div class="relative w-1/3 h-[437px] overflow-hidden">
-          <img
-            src="../assets/people.png"
-            alt="people"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
-          >
-            <h3 class="text-xl font-bold mb-2">People (Prosperity)</h3>
-            <p class="text-base">
-              We partner with farmers and cooperatives to fund nurseries,
-              training, and agroforestry-keeping benefits in the community.
-            </p>
+        <div class="w-full flex gap-8">
+          <div class="relative w-1/3 h-[437px] overflow-hidden">
+            <img
+              src="../assets/people.png"
+              alt="people"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
+            >
+              <h3 class="text-xl font-bold mb-2">People (Prosperity)</h3>
+              <p class="text-base">
+                We partner with farmers and cooperatives to fund nurseries,
+                training, and agroforestry-keeping benefits in the community.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="relative w-1/3 h-[437px] overflow-hidden">
-          <img
-            src="../assets/nature.png"
-            alt="nature"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
-          >
-            <h3 class="text-xl font-bold mb-2">Nature (Biodiversity)</h3>
-            <p class="text-base">
-              We partner with farmers and cooperatives to fund nurseries,
-              training, and agroforestry-keeping benefits in the community.
-            </p>
+          <div class="relative w-1/3 h-[437px] overflow-hidden">
+            <img
+              src="../assets/nature.png"
+              alt="nature"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
+            >
+              <h3 class="text-xl font-bold mb-2">Nature (Biodiversity)</h3>
+              <p class="text-base">
+                We partner with farmers and cooperatives to fund nurseries,
+                training, and agroforestry-keeping benefits in the community.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="relative w-1/3 h-[437px] overflow-hidden">
-          <img
-            src="../assets/climate.png"
-            alt="people"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
-          >
-            <h3 class="text-xl font-bold mb-2">Climate (Resilience)</h3>
-            <p class="text-base">
-              We partner with farmers and cooperatives to fund nurseries,
-              training, and agroforestry-keeping benefits in the community.
-            </p>
+          <div class="relative w-1/3 h-[437px] overflow-hidden">
+            <img
+              src="../assets/climate.png"
+              alt="people"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
+            >
+              <h3 class="text-xl font-bold mb-2">Climate (Resilience)</h3>
+              <p class="text-base">
+                We partner with farmers and cooperatives to fund nurseries,
+                training, and agroforestry-keeping benefits in the community.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- section-5 -->
     <div class="bg-[#F4F1DC]">
       <div
@@ -565,8 +594,15 @@ definePageMeta({
       </div>
     </div>
     <!-- section-8 -->
-    <div>
-      <div class="container mx-auto px-4 py-12 flex gap-8 items-start flex-col">
+    <div class="relative">
+      <img
+        src="../assets/Section 6.png"
+        alt=""
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      <div
+        class="container mx-auto px-4 pt-[100px] pb-[164px] flex gap-8 items-start flex-col relative z-20"
+      >
         <div class="w-full flex flex-col items-start gap-4">
           <div class="w-full flex items-start flex-col gap-4">
             <p class="text-[#94C93D] text-sm uppercase font-semibold">
@@ -654,8 +690,15 @@ definePageMeta({
       </div>
     </div>
     <!-- section-9 -->
-    <div>
-      <div class="container mx-auto px-4 py-12 flex gap-8 items-start flex-col">
+    <div class="relative">
+      <img
+        src="../assets/Section 6.png"
+        alt=""
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      <div
+        class="container mx-auto px-4 pt-[100px] pb-[164px] flex gap-8 items-start flex-col relative z-20"
+      >
         <div class="w-full flex flex-col items-start gap-4">
           <p class="text-[#94C93D] text-sm uppercase font-semibold">
             Make our mision grow
