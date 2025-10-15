@@ -448,7 +448,7 @@ definePageMeta({
       <div class="inset-0 absolute z-40 bg-black bg-opacity-50"></div>
       <div class="absolute w-full h-full z-50 flex justify-center items-center">
         <div
-          class="container mx-auto px-4 py-12 flex gap-16 items-center justify-between border"
+          class="container mx-auto px-4 py-12 flex gap-16 items-center justify-between "
         >
           <div class="flex flex-col items-start gap-4 w-1/2">
             <div class="max-w-[500px]">
@@ -468,11 +468,69 @@ definePageMeta({
             </p>
           </div>
           <!-- form -->
-          <div class="w-1/2 border h-auto flex items-center justify-end">
-            <div class="min-h-[345px]">
-              <form action="">
-                <div></div>
-              </form>
+          <div class="w-1/2 h-auto flex items-center justify-end">
+            <div class="min-h-[345px] w-[472px]">
+              <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+                <div class="flex justify-between mb-4 w-full border border-[#D0D5DD] rounded-md">
+                  <button
+                    class=" text-[#94C93D] px-4 py-2 rounded-md text-sm  w-1/2 bg-[#EDF3E5] border border-[#94C93D] font-semibold"
+                  >
+                    One-time
+                  </button>
+                  <button
+                    class=" text-red-700 px-4 py-2 rounded-full text-sm font-semibold flex items-center  w-1/2"
+                  >
+                    <span class="text-xl">❤️</span> Monthly
+                  </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                  <button
+                    class="bg-green-100 text-green-800 px-4 py-2 rounded-lg"
+                  >
+                    $25
+                  </button>
+                  <button
+                    class="bg-green-100 text-green-800 px-4 py-2 rounded-lg"
+                  >
+                    $50
+                  </button>
+                  <button
+                    class="bg-green-100 text-green-800 px-4 py-2 rounded-lg"
+                  >
+                    $75
+                  </button>
+                  <button
+                    class="bg-green-100 text-green-800 px-4 py-2 rounded-lg"
+                  >
+                    $100
+                  </button>
+                  <button
+                    class="bg-green-100 text-green-800 px-4 py-2 rounded-lg"
+                  >
+                    $500
+                  </button>
+                  <button
+                    class="bg-green-100 text-green-800 px-4 py-2 rounded-lg"
+                  >
+                    $1000
+                  </button>
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="number"
+                    placeholder="50"
+                    class="w-full p-2 border rounded-lg text-center"
+                  />
+                  <p class="text-center text-gray-600 mt-1">
+                    Enter your donation amount.
+                  </p>
+                </div>
+                <button
+                  class="bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors w-full"
+                >
+                  DONATE NOW
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -586,61 +644,78 @@ definePageMeta({
       </div>
     </div>
     <!-- section-9 -->
-     <div>
+    <div>
       <div class="container mx-auto px-4 py-12 flex gap-8 items-start flex-col">
         <div class="w-full flex flex-col items-start gap-4">
-          <p class="text-[#94C93D] text-sm uppercase font-semibold">Make our mision grow</p>
+          <p class="text-[#94C93D] text-sm uppercase font-semibold">
+            Make our mision grow
+          </p>
           <div class="flex justify-between items-center gap-8 w-full">
-            <h3 class="text-6xl font-bold capitalize">Story of recovery & hope</h3>
+            <h3 class="text-6xl font-bold capitalize">
+              Story of recovery & hope
+            </h3>
             <div class="flex gap-2">
               <button
                 class="bg-[#92C73E] rounded-full outline-none w-6 h-6 grid place-items-center"
               >
                 <img src="../assets/right_icon.png" alt="" />
               </button>
-              <span class="text-base font-semibold uppercase">
-                View all
-              </span>
+              <span class="text-base font-semibold uppercase"> View all </span>
             </div>
           </div>
         </div>
         <!-- card -->
-        <div class="w-full relative flex items-center gap-4 border border-black justify-between">
-          <button class="h-11 w-10 rounded-md flex items-center justify-center shadow-lg">
-            <img src="../assets/left_icon.png" alt="">
+        <div
+          class="w-full relative flex items-center gap-4 border border-black justify-between"
+        >
+          <button
+            class="h-11 w-10 rounded-md flex items-center justify-center shadow-lg"
+          >
+            <img src="../assets/left_icon.png" alt="" />
           </button>
           <div class="shadow-lg max-w-[428px]">
-            <img src="../assets/hope.png" alt="">
+            <img src="../assets/hope.png" alt="" />
             <div class="p-4 w-full flex flex-col gap-2 items-start">
               <h3 class="font-bold text-2xl">Become a member</h3>
-              <p class="text-base text-[#475467] w-full">We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community.</p>
+              <p class="text-base text-[#475467] w-full">
+                We partner with farmers and cooperatives to fund nurseries,
+                training, and agroforestry-keeping benefits in the community.
+              </p>
               <div class="w-full h-[2px] bg-gray-400"></div>
               <p class="text-[#475467] text-base">-AUGUST 12, 2025</p>
             </div>
           </div>
           <div class="shadow-lg max-w-[428px]">
-            <img src="../assets/hope2.png" alt="">
+            <img src="../assets/hope2.png" alt="" />
             <div class="p-4 w-full flex flex-col gap-2 items-start">
               <h3 class="font-bold text-2xl">Corporate partnerships</h3>
-              <p class="text-base text-[#475467] w-full">We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community.</p>
+              <p class="text-base text-[#475467] w-full">
+                We partner with farmers and cooperatives to fund nurseries,
+                training, and agroforestry-keeping benefits in the community.
+              </p>
               <div class="w-full h-[2px] bg-gray-400"></div>
               <p class="text-[#475467] text-base">-AUGUST 12, 2025</p>
             </div>
           </div>
           <div class="shadow-lg max-w-[428px]">
-            <img src="../assets/hope3.png" alt="">
+            <img src="../assets/hope3.png" alt="" />
             <div class="p-4 w-full flex flex-col gap-2 items-start">
               <h3 class="font-bold text-2xl">Corporate partnerships</h3>
-              <p class="text-base text-[#475467] w-full">We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community.</p>
+              <p class="text-base text-[#475467] w-full">
+                We partner with farmers and cooperatives to fund nurseries,
+                training, and agroforestry-keeping benefits in the community.
+              </p>
               <div class="w-full h-[2px] bg-gray-400"></div>
               <p class="text-[#475467] text-base">-AUGUST 12, 2025</p>
             </div>
           </div>
-          <button class="h-11 w-10 rounded-md flex items-center justify-center shadow-lg">
-            <img src="../assets/right_icon.png" alt="">
+          <button
+            class="h-11 w-10 rounded-md flex items-center justify-center shadow-lg"
+          >
+            <img src="../assets/right_icon.png" alt="" />
           </button>
         </div>
       </div>
-     </div>
+    </div>
   </div>
 </template>
