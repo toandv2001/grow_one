@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import HomeSection5 from "~/components/home/HomeSection5.vue";
 definePageMeta({
   layout: "default",
 });
@@ -416,7 +417,7 @@ definePageMeta({
           </p>
         </div>
         <div class="w-full min-h-[503px] rounded-3xl overflow-hidden">
-          <img
+          <!-- <img
             src="../assets/forest.png"
             alt="forest"
             class="w-full h-full object-cover"
@@ -425,7 +426,8 @@ definePageMeta({
             src="../assets/forest2.png"
             alt="forest"
             class="w-full h-full object-cover"
-          />
+          /> -->
+          <home-section5 />
         </div>
         <div class="w-full flex justify-center items-center gap-4 flex-col">
           <div class="flex justify-center items-center gap-2">
