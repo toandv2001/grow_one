@@ -26,11 +26,13 @@ definePageMeta({
           One Future restores ecosystems, empowers communities, and builds a
           better tomorrow, one tree at a time
         </p>
-        <button
+        <a
+          id="donateBtnNav"
+          href="#FUNGSLFMREB"
           class="bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors"
         >
           Donate Now
-        </button>
+        </a>
       </div>
     </div>
     <!-- section-1 -->
@@ -430,11 +432,13 @@ definePageMeta({
             <p class="text-2xl font-semibold">12</p>
             <img src="../assets/tree.png" alt="tree" />
           </div>
-          <button
+          <a
+            id="donateBtnNav"
+            href="#FUNGSLFMREB"
             class="bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors"
           >
             Donate Now
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -448,7 +452,7 @@ definePageMeta({
       <div class="inset-0 absolute z-40 bg-black bg-opacity-50"></div>
       <div class="absolute w-full h-full z-50 flex justify-center items-center">
         <div
-          class="container mx-auto px-4 py-12 flex gap-16 items-center justify-between "
+          class="container mx-auto px-4 py-12 flex gap-16 items-center justify-between"
         >
           <div class="flex flex-col items-start gap-4 w-1/2">
             <div class="max-w-[500px]">
@@ -471,14 +475,16 @@ definePageMeta({
           <div class="w-1/2 h-auto flex items-center justify-end">
             <div class="min-h-[345px] w-[472px]">
               <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-                <div class="flex justify-between mb-4 w-full border border-[#D0D5DD] rounded-md">
+                <div
+                  class="flex justify-between mb-4 w-full border border-[#D0D5DD] rounded-md"
+                >
                   <button
-                    class=" text-[#94C93D] px-4 py-2 rounded-md text-sm  w-1/2 bg-[#EDF3E5] border border-[#94C93D] font-semibold"
+                    class="text-[#94C93D] px-4 py-2 rounded-md text-sm w-1/2 bg-[#EDF3E5] border border-[#94C93D] font-semibold"
                   >
                     One-time
                   </button>
                   <button
-                    class=" text-red-700 px-4 py-2 rounded-full text-sm font-semibold flex items-center  w-1/2 justify-center"
+                    class="text-red-700 px-4 py-2 rounded-full text-sm font-semibold flex items-center w-1/2 justify-center"
                   >
                     <span class="text-xl">❤️</span> Monthly
                   </button>
@@ -525,11 +531,13 @@ definePageMeta({
                     Enter your donation amount.
                   </p>
                 </div>
-                <button
+                <a
+                  id="donateBtnNav"
+                  href="#FUNGSLFMREB"
                   class="bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors w-full"
                 >
                   DONATE NOW
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -665,9 +673,7 @@ definePageMeta({
           </div>
         </div>
         <!-- card -->
-        <div
-          class="w-full relative flex items-center gap-4 justify-between"
-        >
+        <div class="w-full relative flex items-center gap-4 justify-between">
           <button
             class="h-11 w-10 rounded-md flex items-center justify-center shadow-lg"
           >
