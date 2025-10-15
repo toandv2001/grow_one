@@ -478,7 +478,7 @@ definePageMeta({
                     One-time
                   </button>
                   <button
-                    class=" text-red-700 px-4 py-2 rounded-full text-sm font-semibold flex items-center  w-1/2"
+                    class=" text-red-700 px-4 py-2 rounded-full text-sm font-semibold flex items-center  w-1/2 justify-center"
                   >
                     <span class="text-xl">❤️</span> Monthly
                   </button>
