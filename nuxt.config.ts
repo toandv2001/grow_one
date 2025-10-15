@@ -81,8 +81,6 @@ export default defineNuxtConfig({
     strategy: "no_prefix",
     locales: [
       { code: "en-US", iso: "en-US", file: "en-US.json" },
-      { code: "fr-FR", iso: "fr-FR", file: "fr-FR.json" },
-      { code: "ar-AR", iso: "ar-AR", file: "ar-AR.json" },
     ],
     detectBrowserLanguage: {
       useCookie: true,
@@ -122,6 +120,6 @@ export default defineNuxtConfig({
       ],
       optional: [],
     },
-    locales: ["en", "fr", "ar"],
+    locales: ["en"],
   },
 });
