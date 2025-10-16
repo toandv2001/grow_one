@@ -1,82 +1,80 @@
 <template>
-  <div class="">
-    <div class="container w-full mx-auto h-[503px]">
+  <div class="w-full mx-auto h-[503px]">
+    <div
+      ref="containerRef"
+      class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl cursor-col-resize select-none h-full"
+      @mousedown="handleMouseDown"
+      @mouseup="handleMouseUp"
+      @mousemove="handleMouseMove"
+      @mouseleave="handleMouseUp"
+      @touchstart="handleMouseDown"
+      @touchend="handleMouseUp"
+      @touchmove="handleTouchMove"
+      @click="handleClick"
+    >
+      <!-- Image 1 (Bottom/Background) -->
+      <div class="absolute inset-0 h-[503px]">
+        <img
+          :src="imageR"
+          alt="After"
+          class="w-full h-full object-cover"
+          draggable="false"
+        />
+      </div>
+
+      <!-- Image 2 (Top/Foreground) with clip -->
       <div
-        ref="containerRef"
-        class="relative w-full aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl cursor-col-resize select-none h-full"
-        @mousedown="handleMouseDown"
-        @mouseup="handleMouseUp"
-        @mousemove="handleMouseMove"
-        @mouseleave="handleMouseUp"
-        @touchstart="handleMouseDown"
-        @touchend="handleMouseUp"
-        @touchmove="handleTouchMove"
-        @click="handleClick"
+        class="absolute inset-0 transition-none"
+        :style="{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }"
       >
-        <!-- Image 1 (Bottom/Background) -->
-        <div class="absolute inset-0 h-[503px]">
-          <img
-            :src="imageR"
-            alt="After"
-            class="w-full h-full object-cover"
-            draggable="false"
-          />
-        </div>
+        <img
+          :src="imageL"
+          alt="Before"
+          class="w-full h-full object-cover"
+          draggable="false"
+        />
+      </div>
 
-        <!-- Image 2 (Top/Foreground) with clip -->
+      <!-- Slider Line and Handle -->
+      <div
+        class="absolute top-0 bottom-0 shadow-lg transition-none"
+        :style="{ left: `${sliderPosition}%` }"
+      >
         <div
-          class="absolute inset-0 transition-none"
-          :style="{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"
         >
-          <img
-            :src="imageL"
-            alt="Before"
-            class="w-full h-full object-cover"
-            draggable="false"
-          />
-        </div>
-
-        <!-- Slider Line and Handle -->
-        <div
-          class="absolute top-0 bottom-0 shadow-lg transition-none"
-          :style="{ left: `${sliderPosition}%` }"
-        >
-          <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"
+          <svg
+            class="w-5 h-5 text-gray-700 absolute left-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="w-5 h-5 text-gray-700 absolute left-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            <svg
-              class="w-5 h-5 text-gray-700 absolute right-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </div>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          <svg
+            class="w-5 h-5 text-gray-700 absolute right-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
         </div>
       </div>
+    </div>
 
-      <div class="mt-6 text-center text-gray-400 text-sm">
-        <p>Kéo thanh trượt hoặc click vào vị trí bất kỳ để so sánh ảnh</p>
-      </div>
+    <div class="mt-6 text-center text-gray-400 text-sm">
+      <p>Kéo thanh trượt hoặc click vào vị trí bất kỳ để so sánh ảnh</p>
     </div>
   </div>
 </template>

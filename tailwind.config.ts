@@ -4,6 +4,17 @@ export default {
   // content: ["./src/**/*.{html,js}"],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+      screens: {
+        sm: "100%",
+        md: "100%",
+        lg: "100%",
+        xl: "1312px",
+        "2xl": "1312px",
+      },
+    },
     fontFamily: {
       sans: ["Inter"],
       serif: ["serif"],

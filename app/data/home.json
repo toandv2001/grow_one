@@ -1,0 +1,96 @@
+{
+  "involved": [
+    {
+      "id": 1,
+      "img": "/images/involved-0.png",
+      "title": "Become a member",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community."
+    },
+    {
+      "id": 2,
+      "img": "/images/involved-2.jpg",
+      "title": "Corporate partnerships",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community."
+    },
+    {
+      "id": 3,
+      "img": "/images/involved-1.jpg",
+      "title": "Planting partners",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community."
+    },
+    {
+      "id": 4,
+      "img": "/images/involved-2.jpg",
+      "title": "Become a member",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community."
+    },
+    {
+      "id": 5,
+      "img": "/images/involved-1.jpg",
+      "title": "Become a member",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community."
+    }
+  ],
+  "stories": [
+    {
+      "id": 1,
+      "img": "/images/story-1.png",
+      "title": "Become a member",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community.",
+      "date": "AUGUST 12, 2025"
+    },
+    {
+      "id": 2,
+      "img": "/images/story-2.png",
+      "title": "Corporate partnerships",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community.",
+      "date": "AUGUST 12, 2025"
+    },
+    {
+      "id": 3,
+      "img": "/images/story-3.png",
+      "title": "Corporate partnerships",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community.",
+      "date": "AUGUST 12, 2025"
+    },
+    {
+      "id": 4,
+      "img": "/images/story-3.png",
+      "title": "Corporate partnerships",
+      "desc": "We partner with farmers and cooperatives to fund nurseries, training, and agroforestry-keeping benefits in the community.",
+      "date": "AUGUST 12, 2025"
+    }
+  ],
+  "partners": [
+    {
+      "id": 1,
+      "img": "/images/samsung.png",
+      "alt": "Samsung"
+    },
+    {
+      "id": 2,
+      "img": "/images/microsoft.png",
+      "alt": "Microsoft"
+    },
+    {
+      "id": 3,
+      "img": "/images/google.png",
+      "alt": "Google"
+    },
+    {
+      "id": 4,
+      "img": "/images/slack.png",
+      "alt": "Slack"
+    },
+    {
+      "id": 5,
+      "img": "/images/lg.png",
+      "alt": "LG"
+    },
+    {
+      "id": 6,
+      "img": "/images/sony.png",
+      "alt": "Sony"
+    }
+  ]
+}

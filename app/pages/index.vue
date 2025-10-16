@@ -2,11 +2,15 @@
 import HomeSection5 from "~/components/home/HomeSection5.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import * as HomeMock from "~/data/home.json";
 
 definePageMeta({
   layout: "default",
 });
-// No refs needed; use CSS selectors for navigation to avoid init timing issues
+
+const involvedMock = ref(HomeMock.involved);
+const storiesMock = ref(HomeMock.stories);
+const partnersMock = ref(HomeMock.partners);
 </script>
 
 <template>
@@ -24,7 +28,7 @@ definePageMeta({
         class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center w-[80%]"
       >
         <h1
-          class="text-[40px] md:text-6xl xl:text-8xl font-bold text-white mb-4 capitalize"
+          class="text-[40px] md:text-6xl xl:text-[80px] font-bold text-white mb-4 capitalize"
         >
           We grow forest
         </h1>
@@ -50,7 +54,7 @@ definePageMeta({
     >
       <!-- desktop background block for left column -->
       <div
-        class="hidden md:block absolute inset-y-0 left-0 md:w-[650px] bg-[#94C93D]"
+        class="hidden md:block absolute inset-y-0 left-0 w-full md:w-[730px] bg-[#94C93D]"
       ></div>
       <div
         class="md:hidden absolute inset-x-0 top-0 h-[250px] bg-[#94C93D]"
@@ -79,19 +83,19 @@ definePageMeta({
           </div>
         </div>
         <div
-          class="w-full md:w-2/3 bg-white flex justify-center items-center flex-col gap-4 h-full px-0 md:px-0 py-0 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-12 md:mt-0"
+          class="w-full md:w-[calc((2/3)*100%+200px)] bg-white flex justify-center items-center flex-col gap-6 h-full px-0 md:px-0 py-4 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-10 md:mt-0 translate-x-0 md:translate-x-[100px]"
         >
           <div
             class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 h-auto"
           >
             <div class="flex flex-col gap-4 md:gap-8">
               <div
-                class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 p-4 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card.png"
                   alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
+                  class="w-[125px] h-full md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
                 />
                 <div
                   class="pl-0 pr-4 md:pl-0 md:pr-4 flex items-start justify-center gap-1 md:gap-2 flex-col"
@@ -111,7 +115,7 @@ definePageMeta({
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 p-4 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card2.png"
@@ -137,7 +141,7 @@ definePageMeta({
             </div>
             <div class="flex flex-col gap-4 md:gap-8">
               <div
-                class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 p-4 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card3.png"
@@ -162,7 +166,7 @@ definePageMeta({
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 p-4 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card4.png"
@@ -291,7 +295,7 @@ definePageMeta({
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto px-4 py-12 flex flex-col gap-16 items-center h-auto relative z-20"
+        class="container mx-auto px-4 py-10 md:py-12 flex flex-col gap-0 md:gap-16 items-center h-auto relative z-20"
       >
         <div class="w-full flex flex-col items-center justify-center gap-2">
           <p class="md:text-sm text-xs text-[#94C93D] uppercase">our pillars</p>
@@ -299,8 +303,6 @@ definePageMeta({
             Forest - people - future
           </h3>
         </div>
-        <!-- card -->
-
         <ClientOnly>
           <Swiper
             :modules="[Autoplay, Pagination]"
@@ -308,15 +310,13 @@ definePageMeta({
             :space-between="16"
             :breakpoints="{
               640: { slidesPerView: 2, spaceBetween: 20 },
-              1024: { slidesPerView: 3, spaceBetween: 24 },
-              1280: { slidesPerView: 3, spaceBetween: 28 },
+              768: { slidesPerView: 2, spaceBetween: 20, pagination: false },
+              1024: { slidesPerView: 3, spaceBetween: 24, pagination: false },
+              1280: { slidesPerView: 3, spaceBetween: 28, pagination: false },
             }"
-            :pagination="{
-              el: '.swiper-pagination',
-              clickable: true,
-              dynamicBullets: true,
-            }"
-            class="stories-swiper px-2 w-full"
+            :pagination="{ clickable: true }"
+            class="section3-swiper px-2 w-full"
+            wrapper-class="py-10"
           >
             <SwiperSlide>
               <div
@@ -471,77 +471,109 @@ definePageMeta({
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto px-4 pt-[100px] pb-[164px] flex gap-4 items-center flex-col relative z-20"
+        class="container mx-auto pt-16 md:pt-[100px] pb-16 md:pb-[164px] flex gap-8 items-start flex-col relative z-20"
       >
-        <div class="flex items-start flex-col gap-4">
-          <div class="flex items-start flex-col gap-4">
-            <p class="text-sm text-[#94C93D] uppercase">why this work</p>
-            <h3 class="text-6xl font-bold">
+        <div class="w-full flex flex-col items-start gap-4">
+          <div class="w-full flex items-start flex-col gap-4">
+            <p class="text-[#94C93D] text-sm uppercase font-semibold">
+              why this work
+            </p>
+            <h3 class="text-3xl md:text-6xl font-bold capitalize">
               Restore Nature. grow prosperity. fight climate change.
             </h3>
           </div>
-          <p class="text-base text-[#475467] max-w-[844px]">
-            Forests are where nature, people, and climate meet. With local
-            communities, we restore ecosystem, create fair livelihoods, and
-            build resilience to heat and floods
-          </p>
+          <div
+            class="w-full flex flex-col md:flex-row justify-start md:justify-between items-start md:items-end gap-4"
+          >
+            <p
+              class="text-base font-normal text-[#475467] w-full md:w-auto max-w-prose"
+            >
+              Forests are where nature, people, and climate meet. With local
+              communities, we restore ecosystem, create fair livelihoods, and
+              build resilience to heat and floods
+            </p>
+          </div>
         </div>
 
-        <div
-          class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-        >
-          <div class="relative w-full h-80 md:h-[437px] overflow-hidden">
-            <img
-              src="../assets/people.png"
-              alt="people"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
-            >
-              <h3 class="text-xl font-bold mb-2">People (Prosperity)</h3>
-              <p class="text-base">
-                We partner with farmers and cooperatives to fund nurseries,
-                training, and agroforestry-keeping benefits in the community.
-              </p>
-            </div>
-          </div>
-          <div class="relative w-full h-80 md:h-[437px] overflow-hidden">
-            <img
-              src="../assets/nature.png"
-              alt="nature"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
-            >
-              <h3 class="text-xl font-bold mb-2">Nature (Biodiversity)</h3>
-              <p class="text-base">
-                We partner with farmers and cooperatives to fund nurseries,
-                training, and agroforestry-keeping benefits in the community.
-              </p>
-            </div>
-          </div>
-          <div class="relative w-full h-80 md:h-[437px] overflow-hidden">
-            <img
-              src="../assets/climate.png"
-              alt="people"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
-            >
-              <h3 class="text-xl font-bold mb-2">Climate (Resilience)</h3>
-              <p class="text-base">
-                We partner with farmers and cooperatives to fund nurseries,
-                training, and agroforestry-keeping benefits in the community.
-              </p>
-            </div>
-          </div>
-        </div>
+        <ClientOnly>
+          <Swiper
+            :modules="[Autoplay, Navigation, Pagination]"
+            :slides-per-view="1"
+            :space-between="16"
+            :loop="true"
+            :autoplay="false"
+            :breakpoints="{
+              640: { slidesPerView: 2, spaceBetween: 16 },
+              768: { slidesPerView: 2, spaceBetween: 16, pagination: false },
+              1024: { slidesPerView: 3, spaceBetween: 16, pagination: false },
+              1280: { slidesPerView: 3, spaceBetween: 16, pagination: false },
+            }"
+            :navigation="{ prevEl: '.section4-prev', nextEl: '.section4-next' }"
+            :pagination="{ clickable: true }"
+            class="section4-swiper px-2 w-full"
+            wrapper-class="py-10"
+          >
+            <SwiperSlide>
+              <div class="relative w-full h-[437px] overflow-hidden rounded-xl">
+                <img
+                  src="../assets/people.png"
+                  alt="people"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
+                >
+                  <h3 class="text-xl font-bold mb-2">People (Prosperity)</h3>
+                  <p class="text-base">
+                    We partner with farmers and cooperatives to fund nurseries,
+                    training, and agroforestry-keeping benefits in the
+                    community.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="relative w-full h-[437px] overflow-hidden rounded-xl">
+                <img
+                  src="../assets/nature.png"
+                  alt="nature"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
+                >
+                  <h3 class="text-xl font-bold mb-2">Nature (Biodiversity)</h3>
+                  <p class="text-base">
+                    We partner with farmers and cooperatives to fund nurseries,
+                    training, and agroforestry-keeping benefits in the
+                    community.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="relative w-full h-[437px] overflow-hidden rounded-xl">
+                <img
+                  src="../assets/climate.png"
+                  alt="climate"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
+                >
+                  <h3 class="text-xl font-bold mb-2">Climate (Resilience)</h3>
+                  <p class="text-base">
+                    We partner with farmers and cooperatives to fund nurseries,
+                    training, and agroforestry-keeping benefits in the
+                    community.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </ClientOnly>
       </div>
     </div>
-
     <!-- section-5 -->
     <div class="bg-[#F4F1DC]">
       <div
@@ -703,24 +735,20 @@ definePageMeta({
     </div>
     <!-- section-7 -->
     <div class="bg-[#94C93D] w-full">
-      <div class="px-0 py-10 flex gap-[18px] items-center flex-col">
+      <div class="px-0 py-8 flex gap-[18px] items-center flex-col">
         <h3
           class="font-bold text-2xl md:text-6xl text-center text-[#153B35] capitalize px-4"
         >
           Out of partner
         </h3>
-        <div class="w-full px-4">
+        <div class="w-full px-6 md:px-28">
           <ClientOnly>
             <Swiper
               :modules="[Autoplay]"
               :slides-per-view="3"
               :space-between="36"
               :loop="true"
-              :autoplay="{
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }"
+              :autoplay="false"
               :breakpoints="{
                 640: { slidesPerView: 3, spaceBetween: 28 },
                 768: { slidesPerView: 4, spaceBetween: 32 },
@@ -730,46 +758,15 @@ definePageMeta({
               :centered-slides="false"
               class="partners-swiper w-full"
             >
-              <SwiperSlide class="!flex !items-center !justify-center">
+              <SwiperSlide
+                v-for="partner in partnersMock"
+                :key="partner.id"
+                class="!flex !items-center !justify-center"
+              >
                 <img
-                  src="../assets/samsung.png"
-                  alt="Samsung"
-                  class="w-[72px] md:w-[120px] h-auto object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide class="!flex !items-center !justify-center">
-                <img
-                  src="../assets/microsoft.png"
-                  alt="Microsoft"
-                  class="w-[72px] md:w-[120px] h-auto object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide class="!flex !items-center !justify-center">
-                <img
-                  src="../assets/google.png"
-                  alt="Google"
-                  class="w-[72px] md:w-[120px] h-auto object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide class="!flex !items-center !justify-center">
-                <img
-                  src="../assets/slack.png"
-                  alt="Slack"
-                  class="w-[72px] md:w-[90px] h-auto object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide class="!flex !items-center !justify-center">
-                <img
-                  src="../assets/lg.png"
-                  alt="LG"
-                  class="w-[72px] md:w-[110px] h-auto object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide class="!flex !items-center !justify-center">
-                <img
-                  src="../assets/sony.png"
-                  alt="Sony"
-                  class="w-[72px] md:w-[90px] h-auto object-contain"
+                  :src="partner.img"
+                  :alt="partner.alt"
+                  class="w-[72px] md:w-[175px] h-full max-h-[120px] object-contain"
                 />
               </SwiperSlide>
             </Swiper>
@@ -797,7 +794,7 @@ definePageMeta({
             </h3>
           </div>
           <div
-            class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+            class="w-full flex flex-col md:flex-row justify-start md:justify-between items-start md:items-end gap-4"
           >
             <p
               class="text-base font-normal text-[#475467] w-full md:w-auto max-w-prose"
@@ -818,178 +815,175 @@ definePageMeta({
             </div>
           </div>
         </div>
-        <!-- card -->
-        <div
-          class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <div class="min-h-[420px] md:min-h-[610px] w-full shadow-xl">
-            <img src="../assets/Image.png" alt="" class="w-full h-auto" />
-            <div class="p-4 flex flex-col items-start gap-2">
-              <h5 class="text-2xl font-bold">Become a member</h5>
-              <p
-                class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
+        <ClientOnly>
+          <Swiper
+            :modules="[Autoplay, Navigation, Pagination]"
+            :slides-per-view="1"
+            :space-between="16"
+            :loop="true"
+            :autoplay="false"
+            :breakpoints="{
+              640: { slidesPerView: 2, spaceBetween: 16 },
+              768: { slidesPerView: 2, spaceBetween: 16, pagination: false },
+              1024: { slidesPerView: 3, spaceBetween: 16, pagination: false },
+              1280: { slidesPerView: 3, spaceBetween: 16, pagination: false },
+            }"
+            :navigation="{ prevEl: '.stories-prev', nextEl: '.stories-next' }"
+            :pagination="{ clickable: true }"
+            class="stories-swiper px-2 w-full"
+            wrapper-class="py-10"
+          >
+            <SwiperSlide v-for="x in involvedMock">
+              <div
+                :key="x.id"
+                class="w-full h-[454px] md:h-[610px] shadow-xl flex flex-col rounded-xl overflow-hidden"
               >
-                We partner with farmers and cooperatives to fund nurseries,
-                training, and agroforestry-keeping benefits in the community.
-                This is a very long text to test overflow and ellipsis should
-                appear here if it exceeds the width.
-              </p>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-sm text-[#94C93D]">Know more</span>
-                <img src="../assets/arrow_right.png" alt="" />
+                <div class="w-full h-[calc(100%-150px)] flex-1">
+                  <img
+                    :src="x.img"
+                    alt=""
+                    class="block w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="p-6 flex flex-col items-start gap-2 w-full h-[150px]"
+                >
+                  <h5 class="text-2xl font-bold">{{ x.title }}</h5>
+                  <p
+                    class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
+                  >
+                    {{ x.desc }}
+                  </p>
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-sm text-[#94C93D]">
+                      Know more
+                    </span>
+                    <img src="../assets/arrow_right.png" alt="" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="min-h-[420px] md:min-h-[610px] w-full shadow-xl">
-            <img src="../assets/Image.png" alt="" class="w-full h-auto" />
-            <div class="p-4 flex flex-col items-start gap-2">
-              <h5 class="text-2xl font-bold">Become a member</h5>
-              <p
-                class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
-              >
-                We partner with farmers and cooperatives to fund nurseries,
-                training, and agroforestry-keeping benefits in the community.
-                This is a very long text to test overflow and ellipsis should
-                appear here if it exceeds the width.
-              </p>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-sm text-[#94C93D]">Know more</span>
-                <img src="../assets/arrow_right.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[420px] md:min-h-[610px] w-full shadow-xl">
-            <img src="../assets/Image.png" alt="" class="w-full h-auto" />
-            <div class="p-4 flex flex-col items-start gap-2">
-              <h5 class="text-2xl font-bold">Become a member</h5>
-              <p
-                class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
-              >
-                We partner with farmers and cooperatives to fund nurseries,
-                training, and agroforestry-keeping benefits in the community.
-                This is a very long text to test overflow and ellipsis should
-                appear here if it exceeds the width.
-              </p>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-sm text-[#94C93D]">Know more</span>
-                <img src="../assets/arrow_right.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+            </SwiperSlide>
+          </Swiper>
+        </ClientOnly>
       </div>
     </div>
     <!-- section-9 -->
     <div class="relative">
       <img
-        src="../assets/Section 6.png"
-        alt=""
-        class="absolute top-0 left-0 w-full h-full object-cover"
+        src="../assets/Section 7.png"
+        class="absolute top-0 left-0 w-full h-full object-contain"
       />
       <div
-        class="container mx-auto px-4 pt-[100px] pb-[164px] flex gap-8 items-start flex-col relative z-20"
+        class="container mx-auto px-4 md:px-0 py-4 md:py-0 flex gap-8 items-start flex-col relative z-20"
       >
         <div class="w-full flex flex-col items-start gap-4">
-          <p class="text-[#94C93D] text-sm uppercase font-semibold">
-            Make our mision grow
-          </p>
-          <div class="flex justify-between items-center gap-8 w-full">
-            <h3 class="text-6xl font-bold capitalize">
-              Story of recovery & hope
-            </h3>
-            <div class="flex gap-2">
-              <button
-                class="bg-[#92C73E] rounded-full outline-none w-6 h-6 grid place-items-center"
-              >
-                <img src="../assets/right_icon.png" alt="" />
-              </button>
-              <span class="text-base font-semibold uppercase"> View all </span>
+          <div class="w-full flex items-start flex-col gap-4">
+            <p class="text-[#94C93D] text-sm uppercase font-semibold">
+              Make our mision grow
+            </p>
+            <div
+              class="w-full flex gap-4 flex-col md:flex-row items-start md:items-end justify-start md:justify-between"
+            >
+              <h3 class="text-3xl md:text-6xl font-bold capitalize">
+                Story of recovery & hope
+              </h3>
+              <div class="flex gap-2">
+                <button
+                  class="bg-[#92C73E] rounded-full outline-none w-6 h-6 grid place-items-center"
+                >
+                  <img src="../assets/right_icon.png" alt="" />
+                </button>
+                <span class="text-base font-semibold uppercase">
+                  View all
+                </span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- card slider -->
+        <!-- Stories Slider with Navigation Buttons -->
         <div class="w-full relative">
+          <!-- Left Navigation Button - Only visible on PC -->
           <button
-            class="stories-prev hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 h-11 w-10 rounded-md items-center justify-center shadow-lg bg-white/90 hover:bg-white"
-            aria-label="Previous"
+            class="section9-prev hidden md:flex absolute -left-16 top-1/2 -translate-y-1/2 z-10 bg-white rounded-lg shadow-lg p-3 hover:bg-gray-50 transition-colors cursor-pointer"
+            aria-label="Previous story"
           >
-            <img src="../assets/left_icon.png" alt="previous" />
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 15L7.5 10L12.5 5"
+                stroke="#1E1E1E"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
 
+          <!-- Swiper Slider -->
           <ClientOnly>
             <Swiper
-              :modules="[Autoplay, Navigation]"
-              :slides-per-view="1.1"
+              :modules="[Autoplay, Navigation, Pagination]"
+              :slides-per-view="1"
               :space-between="16"
               :loop="true"
-              :autoplay="{ delay: 4000, disableOnInteraction: false }"
+              :autoplay="false"
               :breakpoints="{
                 640: { slidesPerView: 2, spaceBetween: 20 },
-                1024: { slidesPerView: 3, spaceBetween: 24 },
-                1280: { slidesPerView: 3, spaceBetween: 28 },
+                768: { slidesPerView: 2, spaceBetween: 20, pagination: false },
+                1024: { slidesPerView: 3, spaceBetween: 24, pagination: false },
+                1280: { slidesPerView: 3, spaceBetween: 28, pagination: false },
               }"
-              :navigation="{ prevEl: '.stories-prev', nextEl: '.stories-next' }"
-              class="stories-swiper px-2 w-full"
+              :navigation="{
+                prevEl: '.section9-prev',
+                nextEl: '.section9-next',
+              }"
+              :pagination="{ clickable: true }"
+              class="stories-swiper w-full"
+              wrapper-class="py-10"
             >
-              <SwiperSlide>
+              <SwiperSlide v-for="story in storiesMock" :key="story.id">
                 <div
                   class="shadow-lg w-full bg-white rounded-xl overflow-hidden"
                 >
-                  <img src="../assets/hope.png" alt="" class="w-full h-auto" />
-                  <div class="p-4 w-full flex flex-col gap-2 items-start">
-                    <h3 class="font-bold text-2xl">Become a member</h3>
+                  <img :src="story.img" alt="" class="w-full h-auto" />
+                  <div class="p-6 w-full flex flex-col gap-2 items-start">
+                    <h3 class="font-bold text-2xl">{{ story.title }}</h3>
                     <p class="text-base text-[#475467] w-full">
-                      We partner with farmers and cooperatives to fund
-                      nurseries, training, and agroforestry-keeping benefits in
-                      the community.
+                      {{ story.desc }}
                     </p>
                     <div class="w-full h-[2px] bg-gray-400"></div>
-                    <p class="text-[#475467] text-base">-AUGUST 12, 2025</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  class="shadow-lg w-full bg-white rounded-xl overflow-hidden"
-                >
-                  <img src="../assets/hope2.png" alt="" class="w-full h-auto" />
-                  <div class="p-4 w-full flex flex-col gap-2 items-start">
-                    <h3 class="font-bold text-2xl">Corporate partnerships</h3>
-                    <p class="text-base text-[#475467] w-full">
-                      We partner with farmers and cooperatives to fund
-                      nurseries, training, and agroforestry-keeping benefits in
-                      the community.
-                    </p>
-                    <div class="w-full h-[2px] bg-gray-400"></div>
-                    <p class="text-[#475467] text-base">-AUGUST 12, 2025</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  class="shadow-lg w-full bg-white rounded-xl overflow-hidden"
-                >
-                  <img src="../assets/hope3.png" alt="" class="w-full h-auto" />
-                  <div class="p-4 w-full flex flex-col gap-2 items-start">
-                    <h3 class="font-bold text-2xl">Corporate partnerships</h3>
-                    <p class="text-base text-[#475467] w-full">
-                      We partner with farmers and cooperatives to fund
-                      nurseries, training, and agroforestry-keeping benefits in
-                      the community.
-                    </p>
-                    <div class="w-full h-[2px] bg-gray-400"></div>
-                    <p class="text-[#475467] text-base">-AUGUST 12, 2025</p>
+                    <p class="text-[#475467] text-base">-{{ story.date }}</p>
                   </div>
                 </div>
               </SwiperSlide>
             </Swiper>
           </ClientOnly>
 
+          <!-- Right Navigation Button - Only visible on PC -->
           <button
-            class="stories-next hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 h-11 w-10 rounded-md items-center justify-center shadow-lg bg-white/90 hover:bg-white"
-            aria-label="Next"
+            class="section9-next hidden md:flex absolute -right-16 top-1/2 -translate-y-1/2 z-10 bg-white rounded-lg shadow-lg p-3 hover:bg-gray-50 transition-colors cursor-pointer"
+            aria-label="Next story"
           >
-            <img src="../assets/right_icon.png" alt="next" />
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.5 5L12.5 10L7.5 15"
+                stroke="#1E1E1E"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -1008,5 +1002,74 @@ definePageMeta({
 
 .partners-swiper :deep(.swiper-slide) {
   height: auto;
+}
+
+.stories-swiper :deep(.swiper-pagination) {
+  width: auto !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.stories-swiper :deep(.swiper-pagination-bullet) {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #d9d9d9;
+  opacity: 1;
+  margin: 0;
+  border-radius: 50%;
+  transform: scale(1) !important;
+}
+
+.stories-swiper :deep(.swiper-pagination-bullet-active) {
+  background-color: #92c73e;
+}
+
+.section4-swiper :deep(.swiper-pagination) {
+  width: auto !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.section4-swiper :deep(.swiper-pagination-bullet) {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #d9d9d9;
+  opacity: 1;
+  margin: 0;
+  border-radius: 50%;
+  transform: scale(1) !important;
+}
+
+.section4-swiper :deep(.swiper-pagination-bullet-active) {
+  background-color: #92c73e;
+}
+
+.section3-swiper :deep(.swiper-pagination) {
+  width: auto !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.section3-swiper :deep(.swiper-pagination-bullet) {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #d9d9d9;
+  opacity: 1;
+  margin: 0;
+  border-radius: 50%;
+  transform: scale(1) !important;
+}
+
+.section3-swiper :deep(.swiper-pagination-bullet-active) {
+  background-color: #92c73e;
 }
 </style>

@@ -1,46 +1,55 @@
 <template>
-  <header :class="!isScrolled?['text-white fixed w-full z-50 bg-[#1A3635]/80']:['text-white fixed w-full z-[100] bg-[#1A3635]']">
-    <div class="container mx-auto px-6">
-      <div class="flex items-center justify-between h-20">
+  <header
+    :class="[
+      'text-white fixed w-full z-[1000] transition-colors duration-300 ease-in-out bg-[#143A3533]',
+      { 'shadow-md bg-[#143A35]': isScrolled },
+    ]"
+  >
+    <div class="px-6 md:px-20 py-4 md:py-5 relative">
+      <div class="flex items-center justify-between">
         <div class="flex items-center">
           <NuxtLink to="/">
-            <img src="../../../assets/logo.png" alt="">
+            <img
+              src="../../../assets/logo.png"
+              alt=""
+              class="w-[117px] md:w-auto h-[53px] md:h-auto"
+            />
           </NuxtLink>
         </div>
 
-        <nav class="hidden lg:flex items-center space-x-8">
+        <nav class="hidden lg:flex items-center space-x-12">
           <NuxtLink
-            to="/our-work"
+            to="#"
             class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
           >
             Our Work
           </NuxtLink>
           <NuxtLink
-            to="/get-involved"
+            to="#"
             class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
           >
             Get Involved
           </NuxtLink>
           <NuxtLink
-            to="/transparency"
+            to="#"
             class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
           >
             Transparency
           </NuxtLink>
           <NuxtLink
-            to="/about-us"
+            to="#"
             class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
           >
             About Us
           </NuxtLink>
           <NuxtLink
-            to="/about-tree"
+            to="#"
             class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
           >
             About Tree
           </NuxtLink>
           <NuxtLink
-            to="/gift-trees"
+            to="#"
             class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
           >
             Gift Trees
@@ -49,8 +58,16 @@
 
         <div class="flex items-center">
           <a
-          id="donateBtnNav" href="#FUNGSLFMREB"
-            class="bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors"
+            id="donateBtnNav"
+            href="#FUNGSLFMREB"
+            :class="[
+              'hidden md:inline-block px-6 py-3 rounded-full font-bold uppercase text-sm transition-colors',
+              {
+                'bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors':
+                  isScrolled,
+                'bg-transparent text-white border border-white': !isScrolled,
+              },
+            ]"
           >
             Donate Now
           </a>
@@ -76,52 +93,81 @@
         </div>
       </div>
 
-      <div v-if="isMobileMenuOpen" class="lg:hidden border-t border-[#2A4645]">
-        <nav class="py-4 space-y-3">
-          <NuxtLink
-            to="/our-work"
-            class="block px-4 py-2 text-white hover:text-[#9CCC3B] hover:bg-[#2A4645] rounded uppercase text-sm font-medium"
-            @click="closeMobileMenu"
-          >
-            Our Work
-          </NuxtLink>
-          <NuxtLink
-            to="/get-involved"
-            class="block px-4 py-2 text-white hover:text-[#9CCC3B] hover:bg-[#2A4645] rounded uppercase text-sm font-medium"
-            @click="closeMobileMenu"
-          >
-            Get Involved
-          </NuxtLink>
-          <NuxtLink
-            to="/transparency"
-            class="block px-4 py-2 text-white hover:text-[#9CCC3B] hover:bg-[#2A4645] rounded uppercase text-sm font-medium"
-            @click="closeMobileMenu"
-          >
-            Transparency
-          </NuxtLink>
-          <NuxtLink
-            to="/about-us"
-            class="block px-4 py-2 text-white hover:text-[#9CCC3B] hover:bg-[#2A4645] rounded uppercase text-sm font-medium"
-            @click="closeMobileMenu"
-          >
-            About Us
-          </NuxtLink>
-          <NuxtLink
-            to="/about-tree"
-            class="block px-4 py-2 text-white hover:text-[#9CCC3B] hover:bg-[#2A4645] rounded uppercase text-sm font-medium"
-            @click="closeMobileMenu"
-          >
-            About Tree
-          </NuxtLink>
-          <NuxtLink
-            to="/gift-trees"
-            class="block px-4 py-2 text-white hover:text-[#9CCC3B] hover:bg-[#2A4645] rounded uppercase text-sm font-medium"
-            @click="closeMobileMenu"
-          >
-            Gift Trees
-          </NuxtLink>
-        </nav>
-      </div>
+      <!-- Backdrop overlay -->
+      <Transition
+        enter-active-class="transition-opacity duration-300 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition-opacity duration-200 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
+        <div
+          v-if="isMobileMenuOpen"
+          class="fixed inset-0 bg-black/50 z-[-1] lg:hidden"
+          @click="closeMobileMenu"
+        />
+      </Transition>
+
+      <!-- Mobile menu -->
+      <Transition
+        enter-active-class="transition transform duration-300 ease-out"
+        enter-from-class="opacity-0 -translate-y-2"
+        enter-to-class="opacity-100 translate-y-0"
+        leave-active-class="transition transform duration-200 ease-in"
+        leave-from-class="opacity-100 translate-y-0"
+        leave-to-class="opacity-0 -translate-y-2"
+      >
+        <div
+          v-if="isMobileMenuOpen"
+          class="lg:hidden origin-top overflow-hidden absolute left-0 right-0 top-full z-10 bg-[#143A3533] shadow-lg"
+        >
+          <nav class="py-4">
+            <NuxtLink
+              to="#"
+              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              @click="closeMobileMenu"
+            >
+              Our Work
+            </NuxtLink>
+            <NuxtLink
+              to="#"
+              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              @click="closeMobileMenu"
+            >
+              Get Involved
+            </NuxtLink>
+            <NuxtLink
+              to="#"
+              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              @click="closeMobileMenu"
+            >
+              Transparency
+            </NuxtLink>
+            <NuxtLink
+              to="#"
+              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              @click="closeMobileMenu"
+            >
+              About Us
+            </NuxtLink>
+            <NuxtLink
+              to="#"
+              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              @click="closeMobileMenu"
+            >
+              About Tree
+            </NuxtLink>
+            <NuxtLink
+              to="#"
+              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              @click="closeMobileMenu"
+            >
+              Gift Trees
+            </NuxtLink>
+          </nav>
+        </div>
+      </Transition>
     </div>
   </header>
 </template>
@@ -129,6 +175,7 @@
 <script setup lang="ts">
 const isMobileMenuOpen = ref(false);
 const isScrolled = ref(false);
+const headerOpacity = ref(0.8);
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
@@ -137,14 +184,29 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 0; // Đổi màu khi cuộn xuống (scrollY > 0)
+/**
+ * Update scroll state and smoothly interpolate header background opacity.
+ * Opacity transitions from 0.8 at the top to 1.0 after ~200px scroll.
+ */
+const updateScrollState = () => {
+  const y = window.scrollY || 0;
+  isScrolled.value = y > 0;
+  const t = Math.min(y / 200, 1);
+  headerOpacity.value = 0.8 + 0.2 * t;
 };
+
+/**
+ * Computed inline style for the header background color.
+ */
+const headerStyle = computed(() => ({
+  backgroundColor: `rgba(26, 54, 53, ${headerOpacity.value})`,
+}));
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
+  updateScrollState();
+  window.addEventListener("scroll", updateScrollState, { passive: true });
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener("scroll", updateScrollState);
 });
 </script>
