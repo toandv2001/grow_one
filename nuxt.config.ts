@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   //ssr:false,
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+  css: ["swiper/css", "swiper/css/navigation", "swiper/css/pagination"],
   runtimeConfig: {
     public: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "http://localhost:3000",
@@ -19,7 +20,11 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/i18n",
     "@dargmuesli/nuxt-cookie-control",
+    "nuxt-swiper",
   ],
+  build: {
+    transpile: ["swiper"],
+  },
   nitro: {
     compressPublicAssets: true,
     logLevel: 4,
@@ -79,9 +84,7 @@ export default defineNuxtConfig({
     defaultLocale: "en-US",
     langDir: "./locales",
     strategy: "no_prefix",
-    locales: [
-      { code: "en-US", iso: "en-US", file: "en-US.json" },
-    ],
+    locales: [{ code: "en-US", iso: "en-US", file: "en-US.json" }],
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "nuxt-lang",

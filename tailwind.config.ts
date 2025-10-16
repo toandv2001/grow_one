@@ -21,7 +21,6 @@ export default {
         "5xl": "2.5rem",
         "6xl": "3rem",
       },
-      
     },
   },
   content: [
