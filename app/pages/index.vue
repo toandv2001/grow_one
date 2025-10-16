@@ -11,6 +11,11 @@ definePageMeta({
 const involvedMock = ref(HomeMock.involved);
 const storiesMock = ref(HomeMock.stories);
 const partnersMock = ref(HomeMock.partners);
+const treeCount = ref(12);
+const handleChangeTreeCount = (value: number) => {
+  treeCount.value = value;
+};
+// No refs needed; use CSS selectors for navigation to avoid init timing issues
 </script>
 
 <template>
@@ -604,11 +609,14 @@ const partnersMock = ref(HomeMock.partners);
             alt="forest"
             class="w-full h-full object-cover"
           /> -->
-          <home-section5 />
+          <home-section5
+            :tree-count="treeCount"
+            :handleChangeTreeCount="handleChangeTreeCount"
+          />
         </div>
         <div class="w-full flex justify-center items-center gap-4 flex-col">
           <div class="flex justify-center items-center gap-2">
-            <p class="text-2xl font-semibold">12</p>
+            <p class="text-2xl font-semibold">{{ treeCount }}</p>
             <img src="../assets/tree.png" alt="tree" />
           </div>
           <a
@@ -675,36 +683,48 @@ const partnersMock = ref(HomeMock.partners);
                   </button>
                 </div>
                 <div class="grid grid-cols-3 gap-4 mb-4">
-                  <button
+                  <a
+                    href="#FUNGSLFMREB"
+                    data-amount="25"
                     class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
                   >
                     $25
-                  </button>
-                  <button
+                  </a>
+                  <a
+                    href="#FUNGSLFMREB"
+                    data-amount="50"
                     class="bg-[#94C93D] text-[#153B35] px-4 py-3 rounded-lg border border-[#94C93D] shadow-sm font-semibold uppercase"
                   >
                     $50
-                  </button>
-                  <button
+                  </a>
+                  <a
+                    href="#FUNGSLFMREB"
+                    data-amount="75"
                     class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
                   >
                     $75
-                  </button>
-                  <button
+                  </a>
+                  <a
+                    href="#FUNGSLFMREB"
+                    data-amount="100"
                     class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
                   >
                     $100
-                  </button>
-                  <button
+                  </a>
+                  <a
+                    href="#FUNGSLFMREB"
+                    data-amount="500"
                     class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
                   >
                     $500
-                  </button>
-                  <button
+                  </a>
+                  <a
+                    href="#FUNGSLFMREB"
+                    data-amount="1000"
                     class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
                   >
                     $1000
-                  </button>
+                  </a>
                 </div>
                 <div class="mb-4 space-y-1.5">
                   <div class="relative">

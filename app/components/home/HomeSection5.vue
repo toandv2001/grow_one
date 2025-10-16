@@ -70,6 +70,8 @@
             />
           </svg>
         </div>
+
+        <!-- Display TreeCount -->
       </div>
     </div>
 
@@ -79,19 +81,44 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { ref, computed, watch } from "vue";
 import imageR from "@/assets/imageR.png";
 import imageL from "@/assets/imageL.png";
 
+const props = defineProps<{
+  treeCount: number;
+  handleChangeTreeCount: (count: number) => void;
+  minTreeCount?: number;
+  maxTreeCount?: number;
+}>();
+
+// Giá trị mặc định cho min/max nếu không được truyền vào
+const minTree = props.minTreeCount || 0;
+const maxTree = props.maxTreeCount || 100;
+
 const sliderPosition = ref(50);
 const isDragging = ref(false);
-const containerRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
 
-const handleMove = (clientX) => {
+// Tính toán treeCount dựa trên vị trí slider
+// Slider ở 0% = minTreeCount, Slider ở 100% = maxTreeCount
+const calculatedTreeCount = computed(() => {
+  const count = minTree + ((maxTree - minTree) * sliderPosition.value) / 100;
+  return Math.round(count);
+});
+
+// Watch slider position và gọi callback khi thay đổi
+watch(calculatedTreeCount, (newCount) => {
+  if (props.handleChangeTreeCount) {
+    props.handleChangeTreeCount(newCount);
+  }
+});
+
+const handleMove = (clientX: any) => {
   if (!containerRef.value) return;
 
-  const rect = containerRef.value.getBoundingClientRect();
+  const rect = containerRef.value.getBoundingClientRect() as any;
   const x = clientX - rect.left;
   const percentage = (x / rect.width) * 100;
 
@@ -106,17 +133,17 @@ const handleMouseUp = () => {
   isDragging.value = false;
 };
 
-const handleMouseMove = (e) => {
+const handleMouseMove = (e: any) => {
   if (!isDragging.value) return;
   handleMove(e.clientX);
 };
 
-const handleTouchMove = (e) => {
+const handleTouchMove = (e: any) => {
   if (!isDragging.value) return;
   handleMove(e.touches[0].clientX);
 };
 
-const handleClick = (e) => {
+const handleClick = (e: any) => {
   handleMove(e.clientX);
 };
 </script>
