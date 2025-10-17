@@ -214,27 +214,23 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute md:top-0 top-[300px] left-0 w-full h-full md:object-cover object-contain"
       />
       <div
-        class="container mx-auto px-4 pt-16 md:pt-[160px] pb-20 md:pb-[295px] flex flex-col-reverse md:flex-row gap-8 md:gap-8 items-center"
+        class="container mx-auto px-4 pt-16 md:pt-[160px] pb-20 md:pb-[295px] flex flex-col-reverse md:flex-row gap-8 md:gap-[140px] items-center"
       >
         <div class="w-full md:w-1/2 flex justify-center items-center relative">
           <img
             src="../assets/vetinh1.png"
             alt="vetinh1"
-            class="hidden md:block absolute w-[43px] h-[43px] top-[70px] left-[120px]"
+            class="hidden md:block absolute w-[43px] h-[43px] top-[50px] left-[50px]"
           />
           <img
             src="../assets/vetinh2.png"
             alt="vetinh2"
-            class="hidden md:block absolute w-[43px] h-[43px] top-[450px] right-[120px]"
+            class="hidden md:block absolute w-[43px] h-[43px] top-[450px] right-[50px]"
           />
           <div
             class="w-full max-w-sm md:max-w-none flex justify-center items-center"
           >
-            <img
-              src="../assets/Earth.png"
-              alt="earth"
-              class="w-[90%] h-[90%] md:h-auto"
-            />
+            <img src="../assets/Earth.png" alt="earth" />
           </div>
           <div
             class="absolute w-[90%] md:w-full h-full flex md:justify-between md:items-center items-end justify-center top-6 gap-16 md:top-0 md:gap-0"
@@ -252,26 +248,28 @@ const handleChangeTreeCount = (value: number) => {
           </div>
         </div>
         <div
-          class="h-auto md:h-[500px] w-full md:w-1/2 flex items-start gap-6 md:gap-8 flex-col relative z-20"
+          class="h-auto w-full md:w-[596px] flex items-start gap-6 md:gap-8 flex-col relative z-20"
         >
-          <div class="w-full flex items-start gap-2 flex-col">
+          <div class="w-full flex items-start gap-4 flex-col">
             <p class="md:text-sm text-xs text-[#94C93D] uppercase">
               Who we are
             </p>
             <h3
-              class="font-bold md:text-[60px] uppercase text-2xl leading-normal"
+              class="font-bold md:text-[60px] capitalize text-2xl leading-normal"
             >
               Global Nonprofit Growing Forests, Livelihoods, and Climate
               Solutions
             </h3>
           </div>
-          <p class="text-[#475467] md:text-base text-[14px] font-normal">
+          <p
+            class="text-[#475467] md:text-base text-[14px] font-normal md:pt-[5px]"
+          >
             We are a global nonprofit with a threefold mission: restore forests,
             empower communities with sustainable livelihoods, and drive lasting
             climate solutions. Every tree we plant is part of a future we grow
             together.
           </p>
-          <div class="w-full flex items-start gap-4">
+          <div class="w-full flex items-start gap-4 md:pt-[5px]">
             <div class="flex gap-2 items-center">
               <button
                 class="w-7 h-7 rounded-full flex items-center justify-center border-none outline-none bg-[#92C73E]"
@@ -304,9 +302,9 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto px-4 py-10 md:py-12 flex flex-col gap-0 md:gap-16 items-center h-auto relative z-20"
+        class="container mx-auto px-4 py-10 md:py-20 flex flex-col gap-0 md:gap-16 items-center h-auto relative z-20"
       >
-        <div class="w-full flex flex-col items-center justify-center gap-2">
+        <div class="w-full flex flex-col items-center justify-center gap-4">
           <p class="md:text-sm text-xs text-[#94C93D] uppercase">our pillars</p>
           <h3 class="font-bold md:text-6xl text-2xl text-white capitalize">
             Forest - people - future
@@ -321,7 +319,7 @@ const handleChangeTreeCount = (value: number) => {
               640: { slidesPerView: 2, spaceBetween: 20 },
               768: { slidesPerView: 2, spaceBetween: 20, pagination: false },
               1024: { slidesPerView: 3, spaceBetween: 24, pagination: false },
-              1280: { slidesPerView: 3, spaceBetween: 28, pagination: false },
+              1280: { slidesPerView: 3, spaceBetween: 24, pagination: false },
             }"
             :pagination="{ clickable: true }"
             class="section3-swiper px-2 w-full"
@@ -329,7 +327,7 @@ const handleChangeTreeCount = (value: number) => {
           >
             <SwiperSlide>
               <div
-                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-4 flex items-center flex-col gap-4 relative overflow-hidden"
+                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
                 <div class="w-full flex items-start">
                   <img
@@ -340,16 +338,21 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
                 <div class="w-full flex flex-col items-start gap-2">
                   <h4 class="text-2xl font-bold text-[#153B35]">Forests</h4>
-                  <p class="text-base font-normal text-[#475467]">
-                    Restore native ecosysstems with climate-resilient and
-                    science-based planting. Bring back biodiversity, protect
-                    water & soil, and create climate buffers for communities
-                  </p>
-                  <p class="text-base font-normal text-[#475467]">
-                    Your $1 helps a seed become a forest for future generations.
-                  </p>
+                  <div
+                    class="flex w-full items-start flex-col gap-3 md:min-h-[150px]"
+                  >
+                    <p class="text-base font-normal text-[#475467]">
+                      Restore native ecosysstems with climate-resilient and
+                      science-based planting. Bring back biodiversity, protect
+                      water & soil, and create climate buffers for communities
+                    </p>
+                    <p class="text-base font-normal text-[#475467]">
+                      Your $1 helps a seed become a forest for future
+                      generations.
+                    </p>
+                  </div>
                 </div>
-                <div class="w-full flex items-start p-1">
+                <div class="w-full flex items-start pt-1">
                   <p class="text-base font-semibold text-[#94C93D]">Donation</p>
                   <div class="flex justify-center items-center p-[2px]">
                     <img
@@ -376,7 +379,7 @@ const handleChangeTreeCount = (value: number) => {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-4 flex items-center flex-col gap-4 relative overflow-hidden"
+                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
                 <div class="w-full flex items-start">
                   <img
@@ -387,16 +390,20 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
                 <div class="w-full flex flex-col items-start gap-2">
                   <h4 class="text-2xl font-bold text-[#153B35]">People</h4>
-                  <p class="text-base font-normal text-[#475467]">
-                    Provite sustainable livelihoods through agroforestry: native
-                    forests + income crops. Families become forest
-                    guardians-protecting what also sustians thems.
-                  </p>
-                  <p class="text-base font-normal text-[#475467]">
-                    Every tree you fund creates work, dignity, and hope.
-                  </p>
+                  <div
+                    class="flex w-full items-start flex-col gap-3 md:min-h-[150px]"
+                  >
+                    <p class="text-base font-normal text-[#475467]">
+                      Provite sustainable livelihoods through agroforestry:
+                      native forests + income crops. Families become forest
+                      guardians-protecting what also sustians thems.
+                    </p>
+                    <p class="text-base font-normal text-[#475467]">
+                      Every tree you fund creates work, dignity, and hope.
+                    </p>
+                  </div>
                 </div>
-                <div class="w-full flex items-start p-1">
+                <div class="w-full flex items-start pt-1">
                   <p class="text-base font-semibold text-[#94C93D]">Donation</p>
                   <div class="flex justify-center items-center p-[2px]">
                     <img
@@ -423,7 +430,7 @@ const handleChangeTreeCount = (value: number) => {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-4 flex items-center flex-col gap-4 relative overflow-hidden"
+                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
                 <div class="w-full flex items-start">
                   <img
@@ -434,16 +441,21 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
                 <div class="w-full flex flex-col items-start gap-2">
                   <h4 class="text-2xl font-bold text-[#153B35]">Future</h4>
-                  <p class="text-base font-normal text-[#475467]">
-                    See your impact with transparant technology-GPS, photo, and
-                    growth update. Join a global community of donors &
-                    changemakers building a livable future.
-                  </p>
-                  <p class="text-base font-normal text-[#475467]">
-                    Together we ensure people and planet thrive
-                  </p>
+                  <div
+                    class="flex w-full items-start flex-col gap-3 md:min-h-[150px]"
+                  >
+                    <p class="text-base font-normal text-[#475467]">
+                      See your impact with transparant technology-GPS, photo,
+                      and growth update.<br />
+                      Join a global community of donors & changemakers building
+                      a livable future.
+                    </p>
+                    <p class="text-base font-normal text-[#475467]">
+                      Together we ensure people and planet thrive
+                    </p>
+                  </div>
                 </div>
-                <div class="w-full flex items-start p-1">
+                <div class="w-full flex items-start pt-3">
                   <p class="text-base font-semibold text-[#94C93D]">Donation</p>
                   <div class="flex justify-center items-center p-[2px]">
                     <img
@@ -480,11 +492,11 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto pt-16 md:pt-[100px] pb-16 md:pb-[164px] flex gap-8 items-start flex-col relative z-20"
+        class="container mx-auto pt-16 md:pt-[100px] pb-16 md:pb-[164px] flex gap-9 items-start flex-col relative z-20"
       >
         <div class="w-full flex flex-col items-start gap-4">
           <div class="w-full flex items-start flex-col gap-4">
-            <p class="text-[#94C93D] text-sm uppercase font-semibold">
+            <p class="text-[#94C93D] text-sm uppercase font-normal">
               why this work
             </p>
             <h3 class="text-3xl md:text-6xl font-bold capitalize">
@@ -494,9 +506,7 @@ const handleChangeTreeCount = (value: number) => {
           <div
             class="w-full flex flex-col md:flex-row justify-start md:justify-between items-start md:items-end gap-4"
           >
-            <p
-              class="text-base font-normal text-[#475467] w-full md:w-auto max-w-prose"
-            >
+            <p class="text-base font-normal text-[#475467] w-full md:w-[844px]">
               Forests are where nature, people, and climate meet. With local
               communities, we restore ecosystem, create fair livelihoods, and
               build resilience to heat and floods
@@ -520,10 +530,10 @@ const handleChangeTreeCount = (value: number) => {
             :navigation="{ prevEl: '.section4-prev', nextEl: '.section4-next' }"
             :pagination="{ clickable: true }"
             class="section4-swiper px-2 w-full"
-            wrapper-class="py-10"
+            wrapper-class=""
           >
             <SwiperSlide>
-              <div class="relative w-full h-[437px] overflow-hidden rounded-xl">
+              <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/people.png"
                   alt="people"
@@ -532,7 +542,7 @@ const handleChangeTreeCount = (value: number) => {
                 <div
                   class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
                 >
-                  <h3 class="text-xl font-bold mb-2">People (Prosperity)</h3>
+                  <h3 class="text-2xl font-bold mb-2">People (Prosperity)</h3>
                   <p class="text-base">
                     We partner with farmers and cooperatives to fund nurseries,
                     training, and agroforestry-keeping benefits in the
@@ -542,7 +552,7 @@ const handleChangeTreeCount = (value: number) => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="relative w-full h-[437px] overflow-hidden rounded-xl">
+              <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/nature.png"
                   alt="nature"
@@ -551,7 +561,7 @@ const handleChangeTreeCount = (value: number) => {
                 <div
                   class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
                 >
-                  <h3 class="text-xl font-bold mb-2">Nature (Biodiversity)</h3>
+                  <h3 class="text-2xl font-bold mb-2">Nature (Biodiversity)</h3>
                   <p class="text-base">
                     We partner with farmers and cooperatives to fund nurseries,
                     training, and agroforestry-keeping benefits in the
@@ -561,7 +571,7 @@ const handleChangeTreeCount = (value: number) => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="relative w-full h-[437px] overflow-hidden rounded-xl">
+              <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/climate.png"
                   alt="climate"
@@ -570,7 +580,7 @@ const handleChangeTreeCount = (value: number) => {
                 <div
                   class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 bg-opacity-50 text-white p-5"
                 >
-                  <h3 class="text-xl font-bold mb-2">Climate (Resilience)</h3>
+                  <h3 class="text-2xl font-bold mb-2">Climate (Resilience)</h3>
                   <p class="text-base">
                     We partner with farmers and cooperatives to fund nurseries,
                     training, and agroforestry-keeping benefits in the
@@ -586,11 +596,11 @@ const handleChangeTreeCount = (value: number) => {
     <!-- section-5 -->
     <div class="bg-[#F4F1DC]">
       <div
-        class="container mx-auto px-4 py-12 flex gap-4 items-center flex-col"
+        class="container mx-auto px-4 py-20 flex md:gap-[46px] gap-6 items-center flex-col"
       >
         <div class="flex items-center justify-center flex-col gap-4 w-full">
           <p class="text-sm text-[#94C93D] font-normal">Forest</p>
-          <h3 class="text-3xl md:text-5xl font-bold text-center">
+          <h3 class="text-3xl md:text-5xl font-bold text-center capitalize">
             From one tree to a thriving community forest
           </h3>
           <p class="text-[15px] text-[#475467] max-w-[917px] text-center px-2">
@@ -640,27 +650,26 @@ const handleChangeTreeCount = (value: number) => {
         alt=""
         class="w-full h-full absolute inset-0 object-cover z-20"
       />
-      <div class="absolute inset-0 z-40 bg-black bg-opacity-90"></div>
+      <div class="absolute inset-0 z-40 bg-black bg-opacity-70"></div>
       <div class="relative z-50 w-full py-16 md:py-20">
         <div
           class="container mx-auto px-4 flex flex-col md:flex-row gap-4 md:gap-16 items-stretch md:items-center justify-between"
         >
           <div class="flex flex-col items-start gap-4 w-full md:w-1/2">
-            <div class="w-full">
+            <div class="w-full flex items-start flex-col md:gap-4 md:w-[70%]">
               <p
                 class="text-xs md:text-sm font-normal text-[#94C93D] uppercase mb-1"
               >
                 Take action
               </p>
               <h3
-                class="text-2xl md:text-5xl text-white font-bold uppercase leading-tight mb-4 md:mb-2"
+                class="text-2xl md:text-5xl text-white font-bold uppercase mb-4 md:mb-2 md:leading-normal"
               >
-                A better future <br />
-                is calling
+                A better future is calling
               </h3>
             </div>
             <p
-              class="text-sm md:text-base font-normal text-white leading-relaxed"
+              class="text-sm md:text-base font-normal text-white leading-relaxed md:w-[87%]"
             >
               From one gift, we restore native forests with local
               communities-bringing wildlife bac, creating fair livehoods, and
@@ -806,11 +815,11 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto px-4 pt-16 md:pt-[100px] pb-16 md:pb-[164px] flex gap-8 items-start flex-col relative z-20"
+        class="container mx-auto px-4 pt-16 md:pt-[100px] pb-16 md:pb-[113px] flex gap-10 items-start flex-col relative z-20"
       >
         <div class="w-full flex flex-col items-start gap-4">
           <div class="w-full flex items-start flex-col gap-4">
-            <p class="text-[#94C93D] text-sm uppercase font-semibold">
+            <p class="text-[#94C93D] text-sm uppercase font-normal">
               Make our mision grow
             </p>
             <h3 class="text-3xl md:text-6xl font-bold capitalize">
@@ -820,9 +829,7 @@ const handleChangeTreeCount = (value: number) => {
           <div
             class="w-full flex flex-col md:flex-row justify-start md:justify-between items-start md:items-end gap-4"
           >
-            <p
-              class="text-base font-normal text-[#475467] w-full md:w-auto max-w-prose"
-            >
+            <p class="text-base font-normal text-[#475467] w-full md:w-[70%]">
               Forests are where nature, people, and climate meet. With local
               communities, we restore ecosystem, create fair livelihoods, and
               build resilience to heat and floods
@@ -850,12 +857,12 @@ const handleChangeTreeCount = (value: number) => {
               640: { slidesPerView: 2, spaceBetween: 16 },
               768: { slidesPerView: 2, spaceBetween: 16, pagination: false },
               1024: { slidesPerView: 3, spaceBetween: 16, pagination: false },
-              1280: { slidesPerView: 3, spaceBetween: 16, pagination: false },
+              1280: { slidesPerView: 3, spaceBetween: 40, pagination: false },
             }"
             :navigation="{ prevEl: '.stories-prev', nextEl: '.stories-next' }"
             :pagination="{ clickable: true }"
             class="stories-swiper px-2 w-full"
-            wrapper-class="py-10"
+            wrapper-class=""
           >
             <SwiperSlide v-for="x in involvedMock">
               <div
@@ -898,11 +905,11 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute top-0 left-0 w-full h-full object-contain"
       />
       <div
-        class="container mx-auto px-4 md:px-0 py-4 md:py-0 flex gap-8 items-start flex-col relative z-20"
+        class="container mx-auto px-4 md:px-0 py-4 md:py-20 flex gap-10 items-start flex-col relative z-20"
       >
         <div class="w-full flex flex-col items-start gap-4">
           <div class="w-full flex items-start flex-col gap-4">
-            <p class="text-[#94C93D] text-sm uppercase font-semibold">
+            <p class="text-[#94C93D] text-sm uppercase font-normal">
               Make our mision grow
             </p>
             <div
@@ -960,7 +967,7 @@ const handleChangeTreeCount = (value: number) => {
                 640: { slidesPerView: 2, spaceBetween: 20 },
                 768: { slidesPerView: 2, spaceBetween: 20, pagination: false },
                 1024: { slidesPerView: 3, spaceBetween: 24, pagination: false },
-                1280: { slidesPerView: 3, spaceBetween: 28, pagination: false },
+                1280: { slidesPerView: 3, spaceBetween: 24, pagination: false },
               }"
               :navigation="{
                 prevEl: '.section9-prev',
@@ -968,12 +975,10 @@ const handleChangeTreeCount = (value: number) => {
               }"
               :pagination="{ clickable: true }"
               class="stories-swiper w-full"
-              wrapper-class="py-10"
+              wrapper-class="py-1"
             >
               <SwiperSlide v-for="story in storiesMock" :key="story.id">
-                <div
-                  class="shadow-lg w-full bg-white rounded-xl overflow-hidden"
-                >
+                <div class="shadow-xl w-full bg-white overflow-hidden">
                   <img :src="story.img" alt="" class="w-full h-auto" />
                   <div class="p-6 w-full flex flex-col gap-2 items-start">
                     <h3 class="font-bold text-2xl">{{ story.title }}</h3>
