@@ -38,7 +38,7 @@ const handleChangeTreeCount = (value: number) => {
           We grow forest
         </h1>
         <p
-          class="text-base md:text-xl text-white mb-6 max-w-4xl mx-auto px-4 md:px-0"
+          class="text-base md:text-2xl text-white mb-6 max-w-4xl mx-auto px-4 md:px-0"
         >
           Facing a climate crisis, we’re planting a forest of solutions. Grow
           One Future restores ecosystems, empowers communities, and builds a
@@ -69,7 +69,7 @@ const handleChangeTreeCount = (value: number) => {
       >
         <div class="w-full h-full md:w-1/3 flex my-auto">
           <div
-            class="flex justify-center items-start flex-col gap-1 w-full max-w-full md:max-w-[450px] mt-5 md:mt-0"
+            class="flex justify-center items-start flex-col gap-1 w-full max-w-full md:max-w-[455px] mt-5 md:mt-0"
           >
             <p class="text-xs md:text-sm font-normal uppercase text-[#143B35]">
               our by 2050
@@ -80,7 +80,9 @@ const handleChangeTreeCount = (value: number) => {
               By 2050,We Grow One<br class="md:hidden" />
               Future
             </h2>
-            <p class="text-sm font-normal text-[#475467] max-w-[384px] mt-4">
+            <p
+              class="text-sm md:text-[16px] font-normal text-[#475467] mt-4 md:text-left"
+            >
               By 2050, together with communities, Grow One Future will restore
               ecosystems, empower millions of families, and drive global climate
               action—not just planting trees, but growing futures.
@@ -119,7 +121,7 @@ const handleChangeTreeCount = (value: number) => {
                   </p>
                 </div>
               </div>
-               <div
+              <div
                 class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
@@ -139,11 +141,11 @@ const handleChangeTreeCount = (value: number) => {
                     Countries
                   </p>
                   <p class="text-base text-[#475467]">
-                    Building the world’s largest community-led reforestation network.
+                    Building the world’s largest community-led reforestation
+                    network.
                   </p>
                 </div>
               </div>
-              
             </div>
             <div class="flex flex-col gap-4 md:gap-8">
               <div
@@ -178,7 +180,7 @@ const handleChangeTreeCount = (value: number) => {
                   alt="card"
                   class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
                 />
-                 <div
+                <div
                   class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
                 >
                   <h3
@@ -256,7 +258,9 @@ const handleChangeTreeCount = (value: number) => {
             <p class="md:text-sm text-xs text-[#94C93D] uppercase">
               Who we are
             </p>
-            <h3 class="font-bold md:text-[60px] uppercase text-2xl leading-normal">
+            <h3
+              class="font-bold md:text-[60px] uppercase text-2xl leading-normal"
+            >
               Global Nonprofit Growing Forests, Livelihoods, and Climate
               Solutions
             </h3>

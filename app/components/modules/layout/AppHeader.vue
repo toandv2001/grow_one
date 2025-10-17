@@ -5,7 +5,7 @@
       { 'shadow-md bg-[#143A35]': isScrolled },
     ]"
   >
-    <div class="px-6 md:px-20 py-4 md:py-5 relative">
+    <div class="px-6 md:px-20 py-4 md:py-[14px] relative">
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <NuxtLink to="/">
