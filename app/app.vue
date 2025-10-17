@@ -9,6 +9,21 @@ useHead({
   titleTemplate(title) {
     return title ? `${title} - ${t("Grow One")}` : `${t("Grow One")}`;
   },
+  link: [
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossorigin: "",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    },
+  ],
   script: [
     {
       innerHTML: `
@@ -24,8 +39,8 @@ useHead({
           }
         })(window,document,'script','FundraiseUp','AERDTYPP');
       `,
-      type: 'text/javascript',
-      tagPosition: 'head',
+      type: "text/javascript",
+      tagPosition: "head",
     },
   ],
 });
