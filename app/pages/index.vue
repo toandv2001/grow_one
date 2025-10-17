@@ -69,15 +69,15 @@ const handleChangeTreeCount = (value: number) => {
       >
         <div class="w-full h-full md:w-1/3 flex my-auto">
           <div
-            class="flex justify-center items-start flex-col gap-1 w-full max-w-full md:max-w-[411px] mt-5 md:mt-0"
+            class="flex justify-center items-start flex-col gap-1 w-full max-w-full md:max-w-[450px] mt-5 md:mt-0"
           >
             <p class="text-xs md:text-sm font-normal uppercase text-[#143B35]">
               our by 2050
             </p>
             <h2
-              class="text-2xl md:text-[60px] md:leading-[1.21] font-bold text-[#153B35] break-words whitespace-normal"
+              class="text-2xl md:text-[60px] md:leading-[1.21] font-bold text-[#153B35] w-full"
             >
-              By 2050, We Grow One<br class="md:hidden" />
+              By 2050,We Grow One<br class="md:hidden" />
               Future
             </h2>
             <p class="text-sm font-normal text-[#475467] max-w-[384px] mt-4">
@@ -103,7 +103,7 @@ const handleChangeTreeCount = (value: number) => {
                   class="w-[125px] h-full md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 flex items-start justify-center gap-1 md:gap-2 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
                 >
                   <h3
                     class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
@@ -113,39 +113,13 @@ const handleChangeTreeCount = (value: number) => {
                   <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
                     Trees
                   </p>
-                  <p class="text-sm text-[#475467]">
+                  <p class="text-base text-[#475467]">
                     Restored with native and economic species to revive
                     biodiversity.
                   </p>
                 </div>
               </div>
-              <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
-              >
-                <img
-                  src="../assets/card2.png"
-                  alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
-                />
-                <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 flex items-start justify-center gap-1 md:gap-2 flex-col"
-                >
-                  <h3
-                    class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
-                  >
-                    10M
-                  </h3>
-                  <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
-                    Families
-                  </p>
-                  <p class="text-sm text-[#475467]">
-                    Lifted through sustainable forest-based livelihoods.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 md:gap-8">
-              <div
+               <div
                 class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
@@ -154,7 +128,7 @@ const handleChangeTreeCount = (value: number) => {
                   class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 flex items-start justify-center gap-1 md:gap-2 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
                 >
                   <h3
                     class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
@@ -164,9 +138,35 @@ const handleChangeTreeCount = (value: number) => {
                   <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
                     Countries
                   </p>
-                  <p class="text-sm text-[#475467]">
-                    Building the world’s largest community-led reforestation
-                    network.
+                  <p class="text-base text-[#475467]">
+                    Building the world’s largest community-led reforestation network.
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+            <div class="flex flex-col gap-4 md:gap-8">
+              <div
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+              >
+                <img
+                  src="../assets/card2.png"
+                  alt="card"
+                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
+                />
+                <div
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
+                >
+                  <h3
+                    class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
+                  >
+                    10M
+                  </h3>
+                  <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
+                    Families
+                  </p>
+                  <p class="text-base text-[#475467]">
+                    Lifted through sustainable forest-based livelihoods.
                   </p>
                 </div>
               </div>
@@ -178,8 +178,8 @@ const handleChangeTreeCount = (value: number) => {
                   alt="card"
                   class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
                 />
-                <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 flex items-start justify-center gap-1 md:gap-2 flex-col"
+                 <div
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
                 >
                   <h3
                     class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
@@ -189,7 +189,7 @@ const handleChangeTreeCount = (value: number) => {
                   <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
                     Tons of CO₂
                   </p>
-                  <p class="text-sm text-[#475467]">
+                  <p class="text-base text-[#475467]">
                     Captured to advance the global Net Zero pathway.
                   </p>
                 </div>
@@ -212,7 +212,7 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute md:top-0 top-[300px] left-0 w-full h-full md:object-cover object-contain"
       />
       <div
-        class="container mx-auto px-4 pt-16 md:pt-[160px] pb-20 md:pb-[295px] flex flex-col-reverse md:flex-row gap-8 md:gap-4 items-center"
+        class="container mx-auto px-4 pt-16 md:pt-[160px] pb-20 md:pb-[295px] flex flex-col-reverse md:flex-row gap-8 md:gap-8 items-center"
       >
         <div class="w-full md:w-1/2 flex justify-center items-center relative">
           <img
@@ -231,11 +231,11 @@ const handleChangeTreeCount = (value: number) => {
             <img
               src="../assets/Earth.png"
               alt="earth"
-              class="md:w-full w-[90%] h-[90%] md:h-auto"
+              class="w-[90%] h-[90%] md:h-auto"
             />
           </div>
           <div
-            class="absolute w-[90%] h-full flex md:justify-between md:items-center items-end justify-center top-6 gap-16 md:top-0 md:gap-0"
+            class="absolute w-[90%] md:w-full h-full flex md:justify-between md:items-center items-end justify-center top-6 gap-16 md:top-0 md:gap-0"
           >
             <button
               class="w-11 h-11 rounded-full bg-[#ffffff] border-none grid place-items-center hover:bg-[#92C73E]"
@@ -256,7 +256,7 @@ const handleChangeTreeCount = (value: number) => {
             <p class="md:text-sm text-xs text-[#94C93D] uppercase">
               Who we are
             </p>
-            <h3 class="font-bold md:text-6xl uppercase leading-[100%] text-2xl">
+            <h3 class="font-bold md:text-[60px] uppercase text-2xl leading-normal">
               Global Nonprofit Growing Forests, Livelihoods, and Climate
               Solutions
             </h3>

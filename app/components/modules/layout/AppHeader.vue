@@ -61,7 +61,7 @@
             id="donateBtnNav"
             href="#FUNGSLFMREB"
             :class="[
-              'hidden md:inline-block px-6 py-3 rounded-full font-bold uppercase text-sm transition-colors',
+              'inline-block px-6 py-3 rounded-full font-bold uppercase text-sm transition-colors',
               {
                 'bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors':
                   isScrolled,
