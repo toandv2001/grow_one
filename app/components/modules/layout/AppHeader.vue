@@ -1,8 +1,8 @@
 <template>
   <header
     :class="[
-      'text-white fixed w-full z-[1000] transition-colors duration-300 ease-in-out bg-[#143A3533]',
-      { 'shadow-md bg-[#143A35]': isScrolled },
+      'text-white fixed w-full z-[1000] transition-colors duration-300 ease-in-out bg-[#143A35]',
+      { 'shadow-md bg-[#fff]': isScrolled },
     ]"
   >
     <div class="px-6 md:px-20 py-4 md:py-[14px] relative">
@@ -10,9 +10,16 @@
         <div class="flex items-center">
           <NuxtLink to="/">
             <img
-              src="../../../assets/logo.png"
+              src="../../../assets/logo/logo-drak.svg"
               alt=""
               class="w-[117px] md:w-auto h-[53px] md:h-auto"
+              :hidden="isScrolled"
+            />
+            <img
+              src="../../../assets/logo/logo-light.svg"
+              alt=""
+              class="w-[117px] md:w-auto h-[53px] md:h-auto"
+              :hidden="!isScrolled"
             />
           </NuxtLink>
         </div>
@@ -20,37 +27,55 @@
         <nav class="hidden lg:flex items-center space-x-12">
           <NuxtLink
             to="#"
-            class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
+            :class="[
+              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
+              { '!text-[#475467]': isScrolled },
+            ]"
           >
             Our Work
           </NuxtLink>
           <NuxtLink
             to="#"
-            class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
+            :class="[
+              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
+              { '!text-[#475467]': isScrolled },
+            ]"
           >
             Get Involved
           </NuxtLink>
           <NuxtLink
             to="#"
-            class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
+            :class="[
+              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
+              { '!text-[#475467]': isScrolled },
+            ]"
           >
             Transparency
           </NuxtLink>
           <NuxtLink
             to="#"
-            class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
+            :class="[
+              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
+              { '!text-[#475467]': isScrolled },
+            ]"
           >
             About Us
           </NuxtLink>
           <NuxtLink
             to="#"
-            class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
+            :class="[
+              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
+              { '!text-[#475467]': isScrolled },
+            ]"
           >
             About Tree
           </NuxtLink>
           <NuxtLink
             to="#"
-            class="text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm"
+            :class="[
+              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
+              { '!text-[#475467]': isScrolled },
+            ]"
           >
             Gift Trees
           </NuxtLink>

@@ -815,9 +815,9 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto px-4 pt-16 md:pt-[100px] pb-16 md:pb-[113px] flex gap-10 items-start flex-col relative z-20"
+        class="px-4 pt-16 md:pt-[100px] pb-16 md:pb-[164px] flex gap-8 items-start flex-col relative z-20"
       >
-        <div class="w-full flex flex-col items-start gap-4">
+        <div class="w-full flex flex-col items-start gap-4 container mx-auto">
           <div class="w-full flex items-start flex-col gap-4">
             <p class="text-[#94C93D] text-sm uppercase font-normal">
               Make our mision grow
@@ -846,56 +846,65 @@ const handleChangeTreeCount = (value: number) => {
             </div>
           </div>
         </div>
-        <ClientOnly>
-          <Swiper
-            :modules="[Autoplay, Navigation, Pagination]"
-            :slides-per-view="1"
-            :space-between="16"
-            :loop="true"
-            :autoplay="false"
-            :breakpoints="{
-              640: { slidesPerView: 2, spaceBetween: 16 },
-              768: { slidesPerView: 2, spaceBetween: 16, pagination: false },
-              1024: { slidesPerView: 3, spaceBetween: 16, pagination: false },
-              1280: { slidesPerView: 3, spaceBetween: 40, pagination: false },
-            }"
-            :navigation="{ prevEl: '.stories-prev', nextEl: '.stories-next' }"
-            :pagination="{ clickable: true }"
-            class="stories-swiper px-2 w-full"
-            wrapper-class=""
-          >
-            <SwiperSlide v-for="x in involvedMock">
-              <div
-                :key="x.id"
+        <div class="container !ml-auto !mr-0 !pr-0 w-full">
+          <ClientOnly>
+            <Swiper
+              :modules="[Autoplay, Navigation, Pagination]"
+              :slides-per-view="1"
+              :space-between="16"
+              :loop="true"
+              :autoplay="false"
+              :breakpoints="{
+                640: { slidesPerView: 2, spaceBetween: 16 },
+                768: { slidesPerView: 2, spaceBetween: 16, pagination: false },
+                1024: { slidesPerView: 3, spaceBetween: 16, pagination: false },
+                1280: {
+                  slidesPerView: 3.2,
+                  spaceBetween: 16,
+                  pagination: false,
+                },
+              }"
+              :navigation="{ prevEl: '.stories-prev', nextEl: '.stories-next' }"
+              :pagination="{ clickable: true }"
+              class="stories-swiper px-2 w-full"
+              wrapper-class="py-10"
+            >
+              <SwiperSlide
+                v-for="x in involvedMock"
                 class="w-full h-[454px] md:h-[610px] shadow-xl flex flex-col rounded-xl overflow-hidden"
               >
-                <div class="w-full h-[calc(100%-150px)] flex-1">
-                  <img
-                    :src="x.img"
-                    alt=""
-                    class="block w-full h-full object-cover"
-                  />
-                </div>
                 <div
-                  class="p-6 flex flex-col items-start gap-2 w-full h-[150px]"
+                  :key="x.id"
+                  class="w-full h-[454px] md:h-[610px] shadow-xl flex flex-col rounded-xl overflow-hidden"
                 >
-                  <h5 class="text-2xl font-bold">{{ x.title }}</h5>
-                  <p
-                    class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
+                  <div class="w-full h-[calc(100%-150px)] flex-1">
+                    <img
+                      :src="x.img"
+                      alt=""
+                      class="block w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    class="p-6 flex flex-col items-start gap-2 w-full h-[150px]"
                   >
-                    {{ x.desc }}
-                  </p>
-                  <div class="flex items-center gap-2">
-                    <span class="font-bold text-sm text-[#94C93D]">
-                      Know more
-                    </span>
-                    <img src="../assets/arrow_right.png" alt="" />
+                    <h5 class="text-2xl font-bold">{{ x.title }}</h5>
+                    <p
+                      class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
+                    >
+                      {{ x.desc }}
+                    </p>
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-sm text-[#94C93D]">
+                        Know more
+                      </span>
+                      <img src="../assets/arrow_right.png" alt="" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </ClientOnly>
+              </SwiperSlide>
+            </Swiper>
+          </ClientOnly>
+        </div>
       </div>
     </div>
     <!-- section-9 -->
