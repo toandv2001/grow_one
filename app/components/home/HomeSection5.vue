@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="container w-full mx-auto h-[503px]">
+    <div class="w-full mx-auto h-[503px]">
       <div
         ref="containerRef"
         class="relative w-full aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl cursor-col-resize select-none h-full"

@@ -10,12 +10,13 @@
           </NuxtLink>
         </div>
         <p class="text-white mb-4 text-sm leading-relaxed md:w-[420px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare
-          cursus sed nunc eget dictum Sed ornare cursus sed nunc eget dictumd
-          nunc eget dictum Sed ornare cursus sed nunc eget dictum
+          Grow One Future is a U.S. 501(c)(3) nonprofit organization pioneering
+          a transparent and sustainable reforestation model that combines
+          ecosystem restoration with community livelihood development.
         </p>
         <div class="space-y-1 text-sm text-white">
-          <p>+1(302) 230-6560</p>
+          <p>Tax ID: 37-2192387</p>
+          <p>Call: +1(302) 230-6560</p>
           <p>
             Location: 1604 Philadelphia Pike, Suite 78, Wilmington, DE 19809, US
           </p>

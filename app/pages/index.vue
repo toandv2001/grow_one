@@ -530,7 +530,7 @@ const handleChangeTreeCount = (value: number) => {
             :navigation="{ prevEl: '.section4-prev', nextEl: '.section4-next' }"
             :pagination="{ clickable: true }"
             class="section4-swiper px-2 w-full"
-            wrapper-class=""
+            wrapper-class="py-6"
           >
             <SwiperSlide>
               <div class="relative w-full h-[437px] overflow-hidden">
@@ -815,9 +815,9 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="px-4 pt-16 md:pt-[100px] pb-16 md:pb-[164px] flex gap-8 items-start flex-col relative z-20"
+        class="px-4 pt-16 md:pt-[100px] pb-10 md:pb-[164px] flex gap-8 items-start flex-col relative z-20"
       >
-        <div class="w-full flex flex-col items-start gap-4 container mx-auto">
+        <div class="w-full flex flex-col items-start gap-4 container">
           <div class="w-full flex items-start flex-col gap-4">
             <p class="text-[#94C93D] text-sm uppercase font-normal">
               Make our mision grow
@@ -846,64 +846,82 @@ const handleChangeTreeCount = (value: number) => {
             </div>
           </div>
         </div>
-        <div class="container mx-auto w-full">
-          <ClientOnly>
-            <Swiper
-              :modules="[Autoplay, Navigation, Pagination]"
-              :slides-per-view="1"
-              :space-between="16"
-              :loop="true"
-              :autoplay="false"
-              :breakpoints="{
-                640: { slidesPerView: 2, spaceBetween: 16 },
-                768: { slidesPerView: 2, spaceBetween: 16, pagination: false },
-                1024: { slidesPerView: 3, spaceBetween: 16, pagination: false },
-                1280: {
-                  slidesPerView: 3.2,
-                  spaceBetween: 16,
-                  pagination: false,
-                },
-              }"
-              :navigation="{ prevEl: '.stories-prev', nextEl: '.stories-next' }"
-              :pagination="{ clickable: true }"
-              class="stories-swiper px-2 w-full"
-              wrapper-class="py-10"
+        <div class="container w-full pr-0">
+          <div class="relative w-full h-[454px] md:h-[610px] mb-10">
+            <div
+              class="absolute inset-y-0 -left-4 md:left-0 right-0 md:right-[calc(50%-49vw)] h-full"
             >
-              <SwiperSlide
-                v-for="x in involvedMock"
-                class="w-full h-[454px] md:h-[610px] shadow-xl flex flex-col rounded-xl overflow-hidden"
-              >
-                <div
-                  :key="x.id"
-                  class="w-full h-[454px] md:h-[610px] shadow-xl flex flex-col rounded-xl overflow-hidden"
+              <ClientOnly>
+                <Swiper
+                  :modules="[Autoplay, Navigation, Pagination]"
+                  :slides-per-view="1"
+                  :space-between="16"
+                  :slides-offset-after="0"
+                  :loop="true"
+                  :autoplay="false"
+                  :breakpoints="{
+                    640: { slidesPerView: 2, spaceBetween: 16 },
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 16,
+                      pagination: false,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 32,
+                      pagination: false,
+                    },
+                    1280: {
+                      slidesPerView: 3.2,
+                      spaceBetween: 40,
+                      pagination: false,
+                    },
+                  }"
+                  :navigation="{
+                    prevEl: '.stories-prev',
+                    nextEl: '.stories-next',
+                  }"
+                  :pagination="{ clickable: true }"
+                  class="stories-swiper pl-0 pr-0 w-full"
+                  wrapper-class="pb-8 md:py-10"
                 >
-                  <div class="w-full h-[calc(100%-150px)] flex-1">
-                    <img
-                      :src="x.img"
-                      alt=""
-                      class="block w-full h-full object-cover"
-                    />
-                  </div>
-                  <div
-                    class="p-6 flex flex-col items-start gap-2 w-full h-[150px]"
+                  <SwiperSlide
+                    v-for="x in involvedMock"
+                    class="w-full h-[454px] md:h-[610px] shadow-xl flex flex-col rounded-xl overflow-hidden"
                   >
-                    <h5 class="text-2xl font-bold">{{ x.title }}</h5>
-                    <p
-                      class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
+                    <div
+                      :key="x.id"
+                      class="w-full h-[454px] md:h-[610px] shadow-xl flex flex-col rounded-xl overflow-hidden"
                     >
-                      {{ x.desc }}
-                    </p>
-                    <div class="flex items-center gap-2">
-                      <span class="font-bold text-sm text-[#94C93D]">
-                        Know more
-                      </span>
-                      <img src="../assets/arrow_right.png" alt="" />
+                      <div class="w-full h-[calc(100%-150px)] flex-1">
+                        <img
+                          :src="x.img"
+                          alt=""
+                          class="block w-full h-full object-cover"
+                        />
+                      </div>
+                      <div
+                        class="p-6 flex flex-col items-start gap-2 w-full h-[150px]"
+                      >
+                        <h5 class="text-2xl font-bold">{{ x.title }}</h5>
+                        <p
+                          class="text-base text-[#475467] w-full truncate overflow-hidden whitespace-nowrap"
+                        >
+                          {{ x.desc }}
+                        </p>
+                        <div class="flex items-center gap-2">
+                          <span class="font-bold text-sm text-[#94C93D]">
+                            Know more
+                          </span>
+                          <img src="../assets/arrow_right.png" alt="" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </ClientOnly>
+                  </SwiperSlide>
+                </Swiper>
+              </ClientOnly>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -984,7 +1002,7 @@ const handleChangeTreeCount = (value: number) => {
               }"
               :pagination="{ clickable: true }"
               class="stories-swiper w-full"
-              wrapper-class="py-1"
+              wrapper-class="py-6"
             >
               <SwiperSlide v-for="story in storiesMock" :key="story.id">
                 <div class="shadow-xl w-full bg-white overflow-hidden">
@@ -995,7 +1013,7 @@ const handleChangeTreeCount = (value: number) => {
                       {{ story.desc }}
                     </p>
                     <div class="w-full h-[2px] bg-gray-400"></div>
-                    <p class="text-[#475467] text-base">-{{ story.date }}</p>
+                    <p class="text-[#475467] text-base">{{ story.date }}</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -1049,6 +1067,7 @@ const handleChangeTreeCount = (value: number) => {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  top: -8px;
 }
 
 .stories-swiper :deep(.swiper-pagination-bullet) {
