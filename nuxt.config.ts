@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   css: ["swiper/css", "swiper/css/navigation", "swiper/css/pagination"],
+  plugins: [
+    '~/plugins/aos.client.ts',
+  ],
   runtimeConfig: {
     public: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "http://localhost:3000",

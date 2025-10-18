@@ -3,6 +3,7 @@ import HomeSection5 from "~/components/home/HomeSection5.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import * as HomeMock from "~/data/home.json";
+import { ref, onMounted, onUnmounted } from "vue";
 
 definePageMeta({
   layout: "default",
@@ -15,6 +16,27 @@ const treeCount = ref(12);
 const handleChangeTreeCount = (value: number) => {
   treeCount.value = value;
 };
+
+const words = ["Forest", "People", "One Future"];
+const currentIndex = ref(0);
+const isAnimating = ref(false);
+let interval: NodeJS.Timeout | null = null;
+
+onMounted(() => {
+  interval = setInterval(() => {
+    isAnimating.value = true;
+    setTimeout(() => {
+      currentIndex.value = (currentIndex.value + 1) % words.length;
+      isAnimating.value = false;
+    }, 500);
+  }, 3000);
+});
+
+onUnmounted(() => {
+  if (interval) {
+    clearInterval(interval);
+  }
+});
 // No refs needed; use CSS selectors for navigation to avoid init timing issues
 </script>
 
@@ -33,9 +55,21 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center w-[80%]"
       >
         <h1
-          class="text-[40px] md:text-6xl xl:text-[80px] font-bold text-white mb-4 capitalize"
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-6 capitalize leading-tight"
         >
-          We grow forest
+          We grow
+          <span class="relative inline-block w-auto">
+            <span
+              :class="[
+                'inline-block transition-all duration-500 bg-gradient-to-r from-[#9CCC3B] to-[#6FB82E] bg-clip-text text-transparent',
+                isAnimating
+                  ? 'opacity-0 -translate-y-8 scale-95'
+                  : 'opacity-100 translate-y-0 scale-100',
+              ]"
+            >
+              {{ words[currentIndex] }}
+            </span>
+          </span>
         </h1>
         <p
           class="text-base md:text-2xl text-white mb-6 max-w-4xl mx-auto px-4 md:px-0"
@@ -59,13 +93,14 @@ const handleChangeTreeCount = (value: number) => {
     >
       <!-- desktop background block for left column -->
       <div
-        class="hidden md:block absolute inset-y-0 left-0 w-full md:w-[730px] bg-[#94C93D]"
+        class="hidden md:block absolute inset-y-0 left-0 w-full 2xl:w-[730px] md:w-[500px] bg-[#94C93D]"
       ></div>
       <div
         class="md:hidden absolute inset-x-0 top-0 h-[250px] bg-[#94C93D]"
       ></div>
       <div
         class="container mx-auto px-4 flex flex-col md:flex-row gap-4 md:gap-10 relative z-10"
+        data-aos="fade-up"
       >
         <div class="w-full h-full md:w-1/3 flex my-auto">
           <div
@@ -207,7 +242,7 @@ const handleChangeTreeCount = (value: number) => {
       </div>
     </div>
     <!-- section-2 -->
-    <div class="relative">
+    <div class="relative" data-aos="fade-up">
       <img
         src="../assets/Section 9.png"
         alt=""
@@ -303,6 +338,9 @@ const handleChangeTreeCount = (value: number) => {
       />
       <div
         class="container mx-auto px-4 py-10 md:py-20 flex flex-col gap-0 md:gap-16 items-center h-auto relative z-20"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-delay="200"
       >
         <div class="w-full flex flex-col items-center justify-center gap-4">
           <p class="md:text-sm text-xs text-[#94C93D] uppercase">our pillars</p>
@@ -325,7 +363,11 @@ const handleChangeTreeCount = (value: number) => {
             class="section3-swiper px-2 w-full"
             wrapper-class="py-10"
           >
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
               <div
                 class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
@@ -377,7 +419,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="400"
+            >
               <div
                 class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
@@ -428,7 +474,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="600"
+            >
               <div
                 class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
@@ -485,7 +535,12 @@ const handleChangeTreeCount = (value: number) => {
       </div>
     </div>
     <!-- section-4 -->
-    <div class="relative">
+    <div
+      class="relative"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      data-aos-delay="200"
+    >
       <img
         src="../assets/Section 4.png"
         alt=""
@@ -532,7 +587,11 @@ const handleChangeTreeCount = (value: number) => {
             class="section4-swiper px-2 w-full"
             wrapper-class=""
           >
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="400"
+            >
               <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/people.png"
@@ -551,7 +610,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="600"
+            >
               <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/nature.png"
@@ -570,7 +633,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="800"
+            >
               <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/climate.png"
@@ -1109,5 +1176,11 @@ const handleChangeTreeCount = (value: number) => {
 
 .section3-swiper :deep(.swiper-pagination-bullet-active) {
   background-color: #92c73e;
+}
+/* Fallback for browsers that don't support bg-clip-text */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
