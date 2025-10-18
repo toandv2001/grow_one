@@ -68,7 +68,10 @@ onUnmounted(() => {
 <template>
   <div class="">
     <!-- banner -->
-    <div class="relative w-full h-[80vh] md:h-screen overflow-hidden">
+    <div
+      class="relative w-full h-[80vh] md:h-screen overflow-hidden"
+      data-header-theme="green"
+    >
       <!-- Thêm h-screen để full height test -->
       <img
         src="../assets/banner.jpg"
@@ -115,6 +118,7 @@ onUnmounted(() => {
     <!-- section-1 -->
     <div
       class="min-h-[608px] relative overflow-hidden border-b border-[#94C93D]"
+      data-header-theme="green"
     >
       <!-- desktop background block for left column -->
       <div
@@ -124,7 +128,7 @@ onUnmounted(() => {
         class="md:hidden absolute inset-x-0 top-0 h-[250px] bg-[#94C93D]"
       ></div>
       <div
-        class="container mx-auto px-4 flex flex-col md:flex-row gap-4 md:gap-10 relative z-10"
+        class="container min-h-[608px] mx-auto my-auto px-4 flex flex-col md:flex-row gap-4 md:gap-10 relative z-10"
         data-aos="fade-up"
       >
         <div class="w-full h-full md:w-1/3 flex my-auto">
@@ -150,7 +154,7 @@ onUnmounted(() => {
           </div>
         </div>
         <div
-          class="w-full md:w-[calc((2/3)*100%+200px)] bg-white flex justify-center items-center flex-col gap-6 h-full px-0 md:px-0 py-4 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-10 md:mt-0 translate-x-0 md:translate-x-[100px]"
+          class="w-full h-full md:min-h-[608px] md:w-[calc((2/3)*100%+200px)] my-auto bg-white flex justify-center items-center flex-col gap-6 h-full px-0 md:px-0 py-4 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-10 md:mt-auto translate-x-0 md:translate-x-[100px]"
         >
           <div
             class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 h-auto"
@@ -162,7 +166,7 @@ onUnmounted(() => {
                 <img
                   src="../assets/card.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
+                  class="w-[125px] h-full md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
                   class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
@@ -187,7 +191,7 @@ onUnmounted(() => {
                 <img
                   src="../assets/card3.png"
                   alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
+                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
                   class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
@@ -214,7 +218,7 @@ onUnmounted(() => {
                 <img
                   src="../assets/card2.png"
                   alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
+                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
                   class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
@@ -238,7 +242,7 @@ onUnmounted(() => {
                 <img
                   src="../assets/card4.png"
                   alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0"
+                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
                   class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
@@ -267,45 +271,29 @@ onUnmounted(() => {
       </div>
     </div>
     <!-- section-2 -->
-    <div class="relative" data-aos="fade-up">
+    <div class="relative" data-aos="fade-up" data-header-theme="green">
       <img
         src="../assets/Section 9.png"
         alt=""
         class="absolute md:top-0 top-[300px] left-0 w-full h-full md:object-cover object-contain"
       />
       <div
-        class="container mx-auto px-4 pt-16 md:pt-[160px] pb-20 md:pb-[295px] flex flex-col-reverse md:flex-row gap-8 md:gap-[140px] items-center"
+        class="container mx-auto px-4 md:pt-[160px] pb-32 md:pb-[295px] flex flex-col-reverse md:flex-row gap-8 md:gap-[140px] items-center"
       >
-        <div class="w-full md:w-1/2 flex justify-center items-center relative">
+        <div
+          class="w-full md:w-1/2 flex justify-center items-center relative mt-0 md:-mt-40"
+        >
           <img
             src="../assets/vetinh1.png"
             alt="vetinh1"
-            class="hidden md:block absolute w-[43px] h-[43px] top-[50px] left-[50px]"
+            class="w-8 h-8 md:w-auto md:h-auto block absolute top-[0px] left-[30px] md:top-[50px] md:left-[50px]"
           />
           <img
             src="../assets/vetinh2.png"
             alt="vetinh2"
-            class="hidden md:block absolute w-[43px] h-[43px] top-[450px] right-[50px]"
+            class="w-8 h-8 md:w-auto md:h-auto block absolute top-[300px] right-[60px] md:top-[350px] md:right-[40px]"
           />
-          <div
-            class="w-full max-w-sm md:max-w-none flex justify-center items-center"
-          >
-            <img src="../assets/Earth.png" alt="earth" />
-          </div>
-          <div
-            class="absolute w-[90%] md:w-full h-full flex md:justify-between md:items-center items-end justify-center top-6 gap-16 md:top-0 md:gap-0"
-          >
-            <button
-              class="w-11 h-11 rounded-full bg-[#ffffff] border-none grid place-items-center hover:bg-[#92C73E]"
-            >
-              <img src="../assets/left_icon.png" alt="left" />
-            </button>
-            <button
-              class="w-11 h-11 rounded-full bg-[#ffffff] border-none grid place-items-center hover:bg-[#92C73E]"
-            >
-              <img src="../assets/right_icon.png" alt="right" />
-            </button>
-          </div>
+          <CommonEarth />
         </div>
         <div
           class="h-auto w-full md:w-[596px] flex items-start gap-6 md:gap-8 flex-col relative z-20"
@@ -355,7 +343,7 @@ onUnmounted(() => {
       </div>
     </div>
     <!-- section-3 -->
-    <div class="relative">
+    <div class="relative" data-header-theme="green">
       <img
         src="../assets/Section 3.png"
         alt=""
@@ -565,6 +553,7 @@ onUnmounted(() => {
       data-aos="fade-up"
       data-aos-duration="1200"
       data-aos-delay="200"
+      data-header-theme="white"
     >
       <img
         src="../assets/Section 4.png"
@@ -686,7 +675,7 @@ onUnmounted(() => {
       </div>
     </div>
     <!-- section-5 -->
-    <div class="bg-[#F4F1DC]">
+    <div class="bg-[#F4F1DC]" data-header-theme="green">
       <div
         class="container mx-auto px-4 py-20 flex md:gap-[46px] gap-6 items-center flex-col"
       >
@@ -736,7 +725,7 @@ onUnmounted(() => {
       </div>
     </div>
     <!-- section-6 -->
-    <div class="relative w-full">
+    <div class="relative w-full" data-header-theme="white">
       <img
         src="../assets/banner2.jpg"
         alt=""
@@ -745,7 +734,7 @@ onUnmounted(() => {
       <div class="absolute inset-0 z-40 bg-black bg-opacity-70"></div>
       <div class="relative z-50 w-full py-16 md:py-20">
         <div
-          class="container mx-auto px-4 flex flex-col md:flex-row gap-4 md:gap-16 items-stretch md:items-center justify-between"
+          class="container px-4 h-full flex flex-col md:flex-row gap-4 md:gap-16 items-stretch md:items-center justify-between"
         >
           <div class="flex flex-col items-start gap-4 w-full md:w-1/2">
             <div class="w-full flex items-start flex-col md:gap-4 md:w-[70%]">
@@ -839,7 +828,7 @@ onUnmounted(() => {
       </div>
     </div>
     <!-- section-7 -->
-    <div class="bg-[#94C93D] w-full">
+    <div class="bg-[#94C93D] w-full" data-header-theme="white">
       <div class="px-0 py-8 flex gap-[18px] items-center flex-col">
         <h3
           class="font-bold text-2xl md:text-6xl text-center text-[#153B35] capitalize px-4"
@@ -880,7 +869,7 @@ onUnmounted(() => {
       </div>
     </div>
     <!-- section-8 -->
-    <div class="relative">
+    <div class="relative" data-header-theme="white">
       <img
         src="../assets/Section 6.png"
         alt=""
@@ -998,7 +987,7 @@ onUnmounted(() => {
       </div>
     </div>
     <!-- section-9 -->
-    <div class="relative">
+    <div class="relative" data-header-theme="green">
       <img
         src="../assets/Section 7.png"
         class="absolute top-0 left-0 w-full h-full object-contain"

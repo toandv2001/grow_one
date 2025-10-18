@@ -1,8 +1,8 @@
 <template>
   <header
     :class="[
-      'text-white fixed w-full z-[1000] transition-colors duration-300 ease-in-out bg-[#143A35]',
-      { 'shadow-md bg-[#fff]': isScrolled },
+      'fixed w-full z-[1000] transition-colors duration-300 ease-in-out',
+      isGreenTheme ? 'bg-[#143A35] text-white' : 'bg-[#fff] shadow-md',
     ]"
   >
     <div class="px-6 md:px-20 py-4 md:py-[14px] relative">
@@ -10,16 +10,16 @@
         <div class="flex items-center">
           <NuxtLink to="/">
             <img
-              src="../../../assets/logo/logo-drak.svg"
-              alt=""
-              class="w-[117px] md:w-auto h-[53px] md:h-auto"
-              :hidden="isScrolled"
-            />
-            <img
               src="../../../assets/logo/logo-light.svg"
               alt=""
               class="w-[117px] md:w-auto h-[53px] md:h-auto"
-              :hidden="!isScrolled"
+              :hidden="isGreenTheme"
+            />
+            <img
+              src="../../../assets/logo/logo-drak.svg"
+              alt=""
+              class="w-[117px] md:w-auto h-[53px] md:h-auto"
+              :hidden="!isGreenTheme"
             />
           </NuxtLink>
         </div>
@@ -28,8 +28,10 @@
           <NuxtLink
             to="#"
             :class="[
-              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
-              { '!text-[#475467]': isScrolled },
+              'transition-colors font-medium uppercase text-sm',
+              isGreenTheme
+                ? 'text-white hover:text-[#9CCC3B]'
+                : 'text-[#153B35] hover:text-[#9CCC3B]',
             ]"
           >
             Our Work
@@ -37,8 +39,10 @@
           <NuxtLink
             to="#"
             :class="[
-              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
-              { '!text-[#475467]': isScrolled },
+              'transition-colors font-medium uppercase text-sm',
+              isGreenTheme
+                ? 'text-white hover:text-[#9CCC3B]'
+                : 'text-[#153B35] hover:text-[#9CCC3B]',
             ]"
           >
             Get Involved
@@ -46,8 +50,10 @@
           <NuxtLink
             to="#"
             :class="[
-              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
-              { '!text-[#475467]': isScrolled },
+              'transition-colors font-medium uppercase text-sm',
+              isGreenTheme
+                ? 'text-white hover:text-[#9CCC3B]'
+                : 'text-[#153B35] hover:text-[#9CCC3B]',
             ]"
           >
             Transparency
@@ -55,8 +61,10 @@
           <NuxtLink
             to="#"
             :class="[
-              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
-              { '!text-[#475467]': isScrolled },
+              'transition-colors font-medium uppercase text-sm',
+              isGreenTheme
+                ? 'text-white hover:text-[#9CCC3B]'
+                : 'text-[#153B35] hover:text-[#9CCC3B]',
             ]"
           >
             About Us
@@ -64,8 +72,10 @@
           <NuxtLink
             to="#"
             :class="[
-              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
-              { '!text-[#475467]': isScrolled },
+              'transition-colors font-medium uppercase text-sm',
+              isGreenTheme
+                ? 'text-white hover:text-[#9CCC3B]'
+                : 'text-[#153B35] hover:text-[#9CCC3B]',
             ]"
           >
             About Tree
@@ -73,8 +83,10 @@
           <NuxtLink
             to="#"
             :class="[
-              'text-white hover:text-[#9CCC3B] transition-colors font-medium uppercase text-sm',
-              { '!text-[#475467]': isScrolled },
+              'transition-colors font-medium uppercase text-sm',
+              isGreenTheme
+                ? 'text-white hover:text-[#9CCC3B]'
+                : 'text-[#153B35] hover:text-[#9CCC3B]',
             ]"
           >
             Gift Trees
@@ -87,24 +99,23 @@
             href="#FUNGSLFMREB"
             :class="[
               'inline-block px-6 py-3 rounded-full font-semibold uppercase text-sm transition-colors',
-              {
-                'bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-semibold uppercase text-sm hover:bg-[#8BB835] transition-colors':
-                  isScrolled,
-                'bg-[#94C93B] text-[#153B35] hover:bg-[#8BB835]': !isScrolled,
-              },
+              isGreenTheme
+                ? 'bg-[#94C93B] text-[#153B35] hover:bg-[#8BB835]'
+                : 'bg-[#9CCC3B] text-[#1A3635] hover:bg-[#8BB835]',
             ]"
           >
             Donate Now
           </a>
 
           <button
-            class="lg:hidden ml-4 p-2 text-white hover:text-[#9CCC3B]"
+            class="lg:hidden ml-4 p-2 hover:text-[#9CCC3B]"
+            :class="isGreenTheme ? 'text-white' : 'text-[#153B35]'"
             @click="toggleMobileMenu"
           >
             <svg
               class="w-6 h-6"
               fill="none"
-              :stroke="isScrolled ? 'black' : 'currentColor'"
+              :stroke="'currentColor'"
               viewBox="0 0 24 24"
             >
               <path
@@ -199,39 +210,99 @@
 
 <script setup lang="ts">
 const isMobileMenuOpen = ref(false);
-const isScrolled = ref(false);
-const headerOpacity = ref(0.8);
+// Default green on initial load
+const isGreenTheme = ref(true);
+let observer: IntersectionObserver | null = null;
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
 
+// Synchronous initial theme (avoid flicker): evaluate immediately on client
+if (typeof window !== "undefined") {
+  const secs = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-header-theme]"),
+  );
+  if (secs.length) {
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    const visible = secs
+      .map((el) => ({ el, rect: el.getBoundingClientRect() }))
+      .filter(({ rect }) => rect.top < vh && rect.bottom > 0)
+      .sort((a, b) => Math.abs(a.rect.top) - Math.abs(b.rect.top));
+    const target = (visible[0]?.el as HTMLElement) || secs[0];
+    isGreenTheme.value = target?.dataset.headerTheme === "green";
+  }
+}
+
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
 /**
- * Update scroll state and smoothly interpolate header background opacity.
- * Opacity transitions from 0.8 at the top to 1.0 after ~200px scroll.
+ * Observe sections carrying data-header-theme and set header theme accordingly.
  */
-const updateScrollState = () => {
-  const y = window.scrollY || 0;
-  isScrolled.value = y > 0;
-  const t = Math.min(y / 200, 1);
-  headerOpacity.value = 0.8 + 0.2 * t;
-};
-
-/**
- * Computed inline style for the header background color.
- */
-const headerStyle = computed(() => ({
-  backgroundColor: `rgba(26, 54, 53, ${headerOpacity.value})`,
-}));
 onMounted(() => {
-  updateScrollState();
-  window.addEventListener("scroll", updateScrollState, { passive: true });
+  const bootstrap = () => {
+    const secs = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-header-theme]"),
+    );
+    if (!secs.length) return false;
+
+    // Set up IO
+    observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (!visible.length) return;
+        visible.sort(
+          (a, b) =>
+            Math.abs(a.target.getBoundingClientRect().top) -
+            Math.abs(b.target.getBoundingClientRect().top),
+        );
+        const chosen = visible[0];
+        if (!chosen) return;
+        const theme = (chosen.target as HTMLElement).dataset.headerTheme;
+        isGreenTheme.value = theme === "green";
+      },
+      {
+        root: null,
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      },
+    );
+    secs.forEach((s) => observer?.observe(s));
+
+    // Initial evaluation
+    const viewportH =
+      window.innerHeight || document.documentElement.clientHeight;
+    const visible = secs
+      .map((el) => ({ el, rect: el.getBoundingClientRect() }))
+      .filter(({ rect }) => rect.top < viewportH && rect.bottom > 0)
+      .sort((a, b) => Math.abs(a.rect.top) - Math.abs(b.rect.top));
+    const target = (visible[0]?.el as HTMLElement) || secs[0];
+    if (target) isGreenTheme.value = target.dataset.headerTheme === "green";
+    return true;
+  };
+
+  if (!bootstrap()) {
+    const mo = new MutationObserver(() => {
+      if (bootstrap()) mo.disconnect();
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+    // Also try after render cycles
+    // @ts-ignore nextTick is auto-imported in Nuxt
+    nextTick(() => bootstrap());
+    requestAnimationFrame(() => bootstrap());
+    setTimeout(() => bootstrap(), 0);
+    window.addEventListener("load", () => setTimeout(() => bootstrap(), 0), {
+      once: true,
+      passive: true,
+    } as any);
+  }
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", updateScrollState);
+  if (observer) {
+    observer.disconnect();
+    observer = null;
+  }
 });
 </script>

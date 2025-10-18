@@ -42,40 +42,50 @@
           :style="{ left: `${sliderPosition}%` }"
         >
           <div
-            class="gap-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[48px] bg-white rounded-[8px] py-3 px-6 shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
+            <div
+              class="relative gap-3 w-[120px] h-[48px] bg-white rounded-[8px] py-3 px-6 shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"
             >
-              <path
-                d="M12.5 15L7.5 10L12.5 5"
-                stroke="#153B35"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+              <!-- Tree icon centered above the handle; pointer events disabled to avoid drag interference -->
+              <img
+                :src="treeIcon"
+                alt="Tree icon"
+                class="absolute -top-12 left-1/2 -translate-x-1/2 w-9 h-9 pointer-events-none drop-shadow-md"
               />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M12.5 15L7.5 10L12.5 5"
+                  stroke="#153B35"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
 
-            {{ calculatedTreeCount }}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M7.5 15L12.5 10L7.5 5"
-                stroke="#153B35"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+              {{ calculatedTreeCount }}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M7.5 15L12.5 10L7.5 5"
+                  stroke="#153B35"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </div>
         </div>
 
@@ -94,6 +104,7 @@
 import { ref, computed, watch } from "vue";
 import imageR from "@/assets/imageR.png";
 import imageL from "@/assets/imageL.png";
+import treeIcon from "@/assets/tree.png";
 
 const props = defineProps<{
   treeCount: number;
