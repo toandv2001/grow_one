@@ -3,6 +3,7 @@ import HomeSection5 from "~/components/home/HomeSection5.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import * as HomeMock from "~/data/home.json";
+import { ref, onMounted, onUnmounted } from "vue";
 
 definePageMeta({
   layout: "default",
@@ -12,9 +13,55 @@ const involvedMock = ref(HomeMock.involved);
 const storiesMock = ref(HomeMock.stories);
 const partnersMock = ref(HomeMock.partners);
 const treeCount = ref(12);
+const money = ref(25);
+const handleChangeMoney = (val: number) => {
+  money.value = val;
+};
 const handleChangeTreeCount = (value: number) => {
   treeCount.value = value;
 };
+
+const words = ["Forest", "People", "One Future"];
+const currentIndex = ref(0);
+const isAnimating = ref(false);
+let interval: NodeJS.Timeout | null = null;
+const donationType = ref<"one-time" | "monthly">("one-time");
+const selectedAmount = ref<number>(50);
+const customAmount = ref<string>("");
+
+const amounts = [25, 50, 75, 100, 500, 1000];
+
+const handleAmountClick = (amount: number) => {
+  selectedAmount.value = amount;
+  customAmount.value = amount.toString();
+};
+
+const handleCustomAmountChange = () => {
+  if (customAmount.value) {
+    selectedAmount.value = Number(customAmount.value);
+  } else {
+    selectedAmount.value = 50; // default value
+  }
+};
+
+const currentAmount = computed(() => {
+  return customAmount.value ? Number(customAmount.value) : selectedAmount.value;
+});
+onMounted(() => {
+  interval = setInterval(() => {
+    isAnimating.value = true;
+    setTimeout(() => {
+      currentIndex.value = (currentIndex.value + 1) % words.length;
+      isAnimating.value = false;
+    }, 500);
+  }, 3000);
+});
+
+onUnmounted(() => {
+  if (interval) {
+    clearInterval(interval);
+  }
+});
 // No refs needed; use CSS selectors for navigation to avoid init timing issues
 </script>
 
@@ -33,9 +80,21 @@ const handleChangeTreeCount = (value: number) => {
         class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center w-[80%]"
       >
         <h1
-          class="text-[40px] md:text-6xl xl:text-[80px] font-bold text-white mb-4 capitalize"
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-6 capitalize leading-tight"
         >
-          We grow forest
+          We grow
+          <span class="relative inline-block w-auto">
+            <span
+              :class="[
+                'inline-block transition-all duration-500 bg-gradient-to-r from-[#9CCC3B] to-[#6FB82E] bg-clip-text text-transparent',
+                isAnimating
+                  ? 'opacity-0 -translate-y-8 scale-95'
+                  : 'opacity-100 translate-y-0 scale-100',
+              ]"
+            >
+              {{ words[currentIndex] }}
+            </span>
+          </span>
         </h1>
         <p
           class="text-base md:text-2xl text-white mb-6 max-w-4xl mx-auto px-4 md:px-0"
@@ -59,13 +118,14 @@ const handleChangeTreeCount = (value: number) => {
     >
       <!-- desktop background block for left column -->
       <div
-        class="hidden md:block absolute inset-y-0 left-0 w-full md:w-[730px] bg-[#94C93D]"
+        class="hidden md:block absolute inset-y-0 left-0 w-full 2xl:w-[730px] md:w-[500px] bg-[#94C93D]"
       ></div>
       <div
         class="md:hidden absolute inset-x-0 top-0 h-[250px] bg-[#94C93D]"
       ></div>
       <div
         class="container mx-auto px-4 flex flex-col md:flex-row gap-4 md:gap-10 relative z-10"
+        data-aos="fade-up"
       >
         <div class="w-full h-full md:w-1/3 flex my-auto">
           <div
@@ -207,7 +267,7 @@ const handleChangeTreeCount = (value: number) => {
       </div>
     </div>
     <!-- section-2 -->
-    <div class="relative">
+    <div class="relative" data-aos="fade-up">
       <img
         src="../assets/Section 9.png"
         alt=""
@@ -303,6 +363,9 @@ const handleChangeTreeCount = (value: number) => {
       />
       <div
         class="container mx-auto px-4 py-10 md:py-20 flex flex-col gap-0 md:gap-16 items-center h-auto relative z-20"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-delay="200"
       >
         <div class="w-full flex flex-col items-center justify-center gap-4">
           <p class="md:text-sm text-xs text-[#94C93D] uppercase">our pillars</p>
@@ -325,7 +388,11 @@ const handleChangeTreeCount = (value: number) => {
             class="section3-swiper px-2 w-full"
             wrapper-class="py-10"
           >
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
               <div
                 class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
@@ -377,7 +444,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="400"
+            >
               <div
                 class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
@@ -428,7 +499,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="600"
+            >
               <div
                 class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
               >
@@ -485,7 +560,12 @@ const handleChangeTreeCount = (value: number) => {
       </div>
     </div>
     <!-- section-4 -->
-    <div class="relative">
+    <div
+      class="relative"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      data-aos-delay="200"
+    >
       <img
         src="../assets/Section 4.png"
         alt=""
@@ -532,7 +612,11 @@ const handleChangeTreeCount = (value: number) => {
             class="section4-swiper px-2 w-full"
             wrapper-class="py-6"
           >
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="400"
+            >
               <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/people.png"
@@ -551,7 +635,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="600"
+            >
               <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/nature.png"
@@ -570,7 +658,11 @@ const handleChangeTreeCount = (value: number) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="800"
+            >
               <div class="relative w-full h-[437px] overflow-hidden">
                 <img
                   src="../assets/climate.png"
@@ -695,71 +787,51 @@ const handleChangeTreeCount = (value: number) => {
                     <span class="text-xl">❤️</span> Monthly
                   </button>
                 </div>
+                <!-- Amount Buttons -->
                 <div class="grid grid-cols-3 gap-4 mb-4">
-                  <a
-                    href="#FUNGSLFMREB"
-                    data-amount="25"
-                    class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
+                  <button
+                    v-for="amount in amounts"
+                    :key="amount"
+                    @click="handleAmountClick(amount)"
+                    :class="[
+                      'px-4 py-3 rounded-lg border shadow-sm font-semibold transition-all',
+                      selectedAmount === amount
+                        ? 'bg-[#94C93D] text-[#153B35] border-[#94C93D]'
+                        : 'text-[#153B35] border-[#D0D5DD] hover:bg-gray-50',
+                    ]"
                   >
-                    $25
-                  </a>
-                  <a
-                    href="#FUNGSLFMREB"
-                    data-amount="50"
-                    class="bg-[#94C93D] text-[#153B35] px-4 py-3 rounded-lg border border-[#94C93D] shadow-sm font-semibold uppercase"
-                  >
-                    $50
-                  </a>
-                  <a
-                    href="#FUNGSLFMREB"
-                    data-amount="75"
-                    class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
-                  >
-                    $75
-                  </a>
-                  <a
-                    href="#FUNGSLFMREB"
-                    data-amount="100"
-                    class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
-                  >
-                    $100
-                  </a>
-                  <a
-                    href="#FUNGSLFMREB"
-                    data-amount="500"
-                    class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
-                  >
-                    $500
-                  </a>
-                  <a
-                    href="#FUNGSLFMREB"
-                    data-amount="1000"
-                    class="text-[#153B35] px-4 py-3 rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-gray-50 transition-colors"
-                  >
-                    $1000
-                  </a>
+                    ${{ amount }}
+                  </button>
                 </div>
                 <div class="mb-4 space-y-1.5">
                   <div class="relative">
                     <span
-                      class="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#667085] text-base"
-                      >$</span
+                      class="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#667085] text-base font-medium"
                     >
+                      $
+                    </span>
                     <input
                       type="number"
                       placeholder="50"
+                      v-model="customAmount"
+                      @input="handleCustomAmountChange"
+                      min="1"
                       class="w-full pl-9 pr-3.5 py-3 border border-[#D0D5DD] rounded-lg text-center text-[#667085] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#94C93D] focus:border-transparent"
                     />
                   </div>
-                  <p class="text-center text-[#667085] text-sm">
+                  <p class="text-left text-[#667085] text-sm">
                     Enter your donation amount.
                   </p>
                 </div>
-                <button
-                  class="w-full bg-[#94C93D] text-[#153B35] px-6 py-3 rounded-full font-semibold uppercase text-base border border-[#153B35] shadow-sm hover:bg-[#8BB835] transition-colors"
-                >
-                  DONATE NOW
-                </button>
+                <div class="flex w-full">
+                  <a
+                    href="#FUNGSLFMREB"
+                    :data-amount="currentAmount"
+                    class="w-full bg-[#94C93D] text-center text-[#153B35] px-6 py-3 rounded-full font-semibold uppercase text-base border border-[#153B35] shadow-sm hover:bg-[#8BB835] transition-colors"
+                  >
+                    DONATE NOW
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1128,5 +1200,11 @@ const handleChangeTreeCount = (value: number) => {
 
 .section3-swiper :deep(.swiper-pagination-bullet-active) {
   background-color: #92c73e;
+}
+/* Fallback for browsers that don't support bg-clip-text */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
