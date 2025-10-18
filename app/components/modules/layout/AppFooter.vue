@@ -42,7 +42,7 @@
           </li>
           <li class="h-max !m-0">
             <a
-              href="#"
+              href="https://www.instagram.com/growonefuture/"
               class="flex items-center text-white hover:text-white transition-colors"
             >
               <span class="mr-2 flex items-center justify-center">
@@ -57,7 +57,7 @@
           </li>
           <li class="h-max !m-0">
             <a
-              href="#"
+              href="https://www.youtube.com/@growonefuture"
               class="flex items-center text-white hover:text-white transition-colors"
             >
               <span class="mr-2 flex items-center justify-center">
@@ -72,7 +72,7 @@
           </li>
           <li class="h-max !m-0">
             <a
-              href="#"
+              href="https://x.com/growonefuture"
               class="flex items-center text-white hover:text-white transition-colors"
             >
               <span class="mr-2 flex items-center justify-center">
@@ -102,7 +102,7 @@
           </li>
           <li class="h-max !m-0">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/growonefuture/"
               class="flex items-center text-white hover:text-white transition-colors"
             >
               <span class="mr-2 flex items-center justify-center">
