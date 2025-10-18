@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import mapUrl from "~/assets/Map.png";
+import mapUrl from "~/assets/map.png";
 
 /**
  * Earth map component
