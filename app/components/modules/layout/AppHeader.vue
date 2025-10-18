@@ -104,7 +104,7 @@
             <svg
               class="w-6 h-6"
               fill="none"
-              stroke="currentColor"
+              :stroke="isScrolled ? 'black' : 'currentColor'"
               viewBox="0 0 24 24"
             >
               <path

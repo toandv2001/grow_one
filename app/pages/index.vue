@@ -846,7 +846,7 @@ const handleChangeTreeCount = (value: number) => {
             </div>
           </div>
         </div>
-        <div class="container !ml-auto !mr-0 !pr-0 w-full">
+        <div class="container mx-auto w-full">
           <ClientOnly>
             <Swiper
               :modules="[Autoplay, Navigation, Pagination]"
