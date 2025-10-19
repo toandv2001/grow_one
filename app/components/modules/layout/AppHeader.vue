@@ -5,40 +5,27 @@
       isGreenTheme ? 'bg-[#143A35] text-white' : 'bg-[#fff] shadow-md',
     ]"
   >
-<<<<<<< Updated upstream
     <div
       class="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-3 sm:py-4 md:py-5 lg:py-6 relative"
     >
-=======
-    <div class="px-6 xl:px-20 lg:px-10 py-4 xl:py-[14px] lg:py-[12px] relative">
->>>>>>> Stashed changes
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <NuxtLink to="/">
             <img
               src="../../../assets/logo/logo-light.svg"
               alt=""
-<<<<<<< Updated upstream
               class="w-[100px] sm:w-[110px] md:w-[120px] lg:w-[130px] xl:w-auto h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px] xl:h-auto"
-=======
-              class="w-[117px] lg:w-[100px] xl:w-auto h-[53px] md:h-auto"
->>>>>>> Stashed changes
               :hidden="isGreenTheme"
             />
             <img
               src="../../../assets/logo/logo-drak.svg"
               alt=""
-<<<<<<< Updated upstream
               class="w-[100px] sm:w-[110px] md:w-[120px] lg:w-[130px] xl:w-auto h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px] xl:h-auto"
-=======
-              class="w-[117px] xl:w-auto lg:w-[100px] h-[53px] md:h-auto"
->>>>>>> Stashed changes
               :hidden="!isGreenTheme"
             />
           </NuxtLink>
         </div>
 
-<<<<<<< Updated upstream
         <nav
           class="hidden lg:flex items-center space-x-8 xl:space-x-10 2xl:space-x-12"
         >
@@ -46,13 +33,6 @@
             to="#"
             :class="[
               'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
-=======
-        <nav class="hidden lg:flex items-center xl:space-x-12 lg:space-x-4">
-          <NuxtLink
-            to="#"
-            :class="[
-              'transition-colors font-medium uppercase xl:text-sm lg:text-xs',
->>>>>>> Stashed changes
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -63,11 +43,7 @@
           <NuxtLink
             to="#"
             :class="[
-<<<<<<< Updated upstream
               'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
-=======
-              'transition-colors font-medium uppercase xl:text-sm lg:text-xs',
->>>>>>> Stashed changes
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -78,11 +54,7 @@
           <NuxtLink
             to="#"
             :class="[
-<<<<<<< Updated upstream
               'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
-=======
-              'transition-colors font-medium uppercase xl:text-sm lg:text-xs',
->>>>>>> Stashed changes
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -93,11 +65,7 @@
           <NuxtLink
             to="#"
             :class="[
-<<<<<<< Updated upstream
               'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
-=======
-              'transition-colors font-medium uppercase xl:text-sm lg:text-xs',
->>>>>>> Stashed changes
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -108,11 +76,7 @@
           <NuxtLink
             to="#"
             :class="[
-<<<<<<< Updated upstream
               'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
-=======
-              'transition-colors font-medium uppercase xl:text-sm lg:text-xs',
->>>>>>> Stashed changes
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -123,11 +87,7 @@
           <NuxtLink
             to="#"
             :class="[
-<<<<<<< Updated upstream
               'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
-=======
-              'transition-colors font-medium uppercase xl:text-sm lg:text-xs',
->>>>>>> Stashed changes
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -142,11 +102,7 @@
             id="donateBtnNav"
             href="#FUNGSLFMREB"
             :class="[
-<<<<<<< Updated upstream
               'inline-block px-3 sm:px-4 md:px-5 lg:px-6 xl:px-7 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-full font-semibold uppercase text-xs sm:text-sm md:text-base transition-colors shadow-sm hover:shadow-md',
-=======
-              'inline-block xl:px-6 xl:py-3 lg:px-3 lg:py-1.5 rounded-full font-semibold uppercase xl:text-sm lg:text-xs transition-colors',
->>>>>>> Stashed changes
               isGreenTheme
                 ? 'bg-[#94C93B] text-[#153B35] hover:bg-[#8BB835]'
                 : 'bg-[#9CCC3B] text-[#1A3635] hover:bg-[#8BB835]',
