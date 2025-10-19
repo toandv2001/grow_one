@@ -868,7 +868,7 @@ onUnmounted(() => {
                 768: { slidesPerView: 4, spaceBetween: 24 },
                 1024: { slidesPerView: 5, spaceBetween: 28 },
                 1280: { slidesPerView: 6, spaceBetween: 32 },
-                1536: { slidesPerView: 7, spaceBetween: 36 },
+                1536: { slidesPerView: 6, spaceBetween: 36 },
               }"
               :centered-slides="false"
               class="partners-swiper w-full"
