@@ -157,113 +157,113 @@ onUnmounted(() => {
           class="w-full lg:w-2/3 h-full md:min-h-[608px] lg:min-h-[608px] md:w-[calc((2/3)*100%+200px)] my-auto bg-white flex justify-center items-center flex-col gap-6 px-0 md:px-0 py-4 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-10 md:mt-auto translate-x-0 2xl:translate-x-[100px] lg:px-4"
         >
           <div
-            class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-4 h-auto"
+            class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-8 lg:gap-4 h-auto"
           >
-            <div class="flex flex-col gap-4 md:gap-8 lg:gap-4">
+            <div class="flex flex-col gap-4 xl:gap-8 lg:gap-4">
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
                   >
                     1B
                   </h3>
                   <p
-                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                    class="text-sm lg:text-[12px] xl:text-base font-bold text-[#153B35]"
                   >
                     Trees
                   </p>
-                  <p class="text-base lg:text-xs text-[#475467]">
+                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
                     Restored with native and economic species to revive
                     biodiversity.
                   </p>
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card3.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
                   >
                     50
                   </h3>
                   <p
-                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                    class="text-sm lg:text-[12px] xl:text-base font-bold text-[#153B35]"
                   >
                     Countries
                   </p>
-                  <p class="text-base lg:text-xs text-[#475467]">
+                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
                     Building the world’s largest community-led reforestation
                     network.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-8 lg:gap-4">
+            <div class="flex flex-col gap-4 xl:gap-8 lg:gap-4">
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card2.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
                   >
                     10M
                   </h3>
                   <p
-                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                    class="text-sm lg:text-[12px] xl:text-base font-bold text-[#153B35]"
                   >
                     Families
                   </p>
-                  <p class="text-base lg:text-xs text-[#475467]">
+                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
                     Lifted through sustainable forest-based livelihoods.
                   </p>
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card4.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
                   >
                     1B
                   </h3>
                   <p
-                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                    class="text-sm lg:text-[12px] xl:text-base font-bold text-[#153B35]"
                   >
                     Tons of CO₂
                   </p>
-                  <p class="text-base lg:text-xs text-[#475467]">
+                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
                     Captured to advance the global Net Zero pathway.
                   </p>
                 </div>
