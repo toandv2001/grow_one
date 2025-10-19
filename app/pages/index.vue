@@ -161,15 +161,15 @@ onUnmounted(() => {
           >
             <div class="flex flex-col gap-4 xl:gap-8 lg:gap-4">
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto xl:h-[200px] flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-full md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="py-2 pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
                     class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
@@ -181,22 +181,22 @@ onUnmounted(() => {
                   >
                     Trees
                   </p>
-                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
+                  <p class="text-sm lg:text-xs xl:text-base text-[#475467]">
                     Restored with native and economic species to revive
                     biodiversity.
                   </p>
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto xl:h-[200px] flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card3.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-full md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="py-2 pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
                     class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
@@ -208,7 +208,7 @@ onUnmounted(() => {
                   >
                     Countries
                   </p>
-                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
+                  <p class="text-sm lg:text-xs xl:text-base text-[#475467]">
                     Building the world’s largest community-led reforestation
                     network.
                   </p>
@@ -217,15 +217,15 @@ onUnmounted(() => {
             </div>
             <div class="flex flex-col gap-4 xl:gap-8 lg:gap-4">
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto xl:h-[200px] flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
-                  src="../assets/card2.png"
+                  src="../assets/card3.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-full md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="py-2 pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
                     class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
@@ -237,13 +237,13 @@ onUnmounted(() => {
                   >
                     Families
                   </p>
-                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
+                  <p class="text-sm lg:text-xs xl:text-base text-[#475467]">
                     Lifted through sustainable forest-based livelihoods.
                   </p>
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto xl:h-[200px] flex gap-3 xl:gap-6 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card4.png"
@@ -251,7 +251,7 @@ onUnmounted(() => {
                   class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
+                  class="py-2 pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 xl:pt-4 xl:pl-0 xl:pr-4 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
                     class="text-base lg:text-2xl xl:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
@@ -263,7 +263,7 @@ onUnmounted(() => {
                   >
                     Tons of CO₂
                   </p>
-                  <p class="text-base lg:text-xs xl:text-base text-[#475467]">
+                  <p class="text-sm lg:text-xs xl:text-base text-[#475467]">
                     Captured to advance the global Net Zero pathway.
                   </p>
                 </div>
@@ -286,7 +286,7 @@ onUnmounted(() => {
         class="absolute xl:top-0 top-[300px] lg:top-[35px] left-0 w-full h-full md:object-cover object-contain"
       />
       <div
-        class="container mx-auto px-4 xl:pt-[160px] lg:pt-[120px] pb-32 xl:pb-[295px] lg:pb-[160px] flex md:flex-row flex-col-reverse xl:flex-row gap-8 xl:gap-[140px] lg:gap-8 items-center"
+        class="container mx-auto px-4 py-10 xl:pt-[160px] lg:pt-[120px] pb-32 xl:pb-[295px] lg:pb-[160px] flex md:flex-row flex-col-reverse xl:flex-row gap-8 xl:gap-[140px] lg:gap-8 items-center"
       >
         <div
           class="w-full xl:w-1/2 flex justify-center items-center relative mt-0 md:-mt-40 lg:mt-0"

@@ -98,7 +98,7 @@
             id="donateBtnNav"
             href="#FUNGSLFMREB"
             :class="[
-              'inline-block xl:px-6 xl:py-3 lg:px-3 lg:py-1.5 rounded-full font-semibold uppercase xl:text-sm lg:text-xs transition-colors',
+              'inline-block xl:px-6 xl:py-3 lg:px-3 lg:py-1.5 px-3 py-2 rounded-full font-semibold uppercase text-sm transition-colors',
               isGreenTheme
                 ? 'bg-[#94C93B] text-[#153B35] hover:bg-[#8BB835]'
                 : 'bg-[#9CCC3B] text-[#1A3635] hover:bg-[#8BB835]',
