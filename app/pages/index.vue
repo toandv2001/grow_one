@@ -8,7 +8,11 @@ import { ref, onMounted, onUnmounted } from "vue";
 definePageMeta({
   layout: "default",
 });
+const activeType = ref("one-time");
 
+function setActive(type: string) {
+  activeType.value = type;
+}
 const involvedMock = ref(HomeMock.involved);
 const storiesMock = ref(HomeMock.stories);
 const partnersMock = ref(HomeMock.partners);
@@ -802,12 +806,24 @@ onUnmounted(() => {
                   class="flex justify-between mb-4 sm:mb-5 md:mb-6 w-full border border-[#D0D5DD] rounded-lg overflow-hidden"
                 >
                   <button
-                    class="text-[#94C93D] px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base w-1/2 bg-[#EDF3E5] border border-[#94C93D] font-semibold rounded-lg"
+                    @click="setActive('one-time')"
+                    :class="[
+                      ' px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base w-1/2 font-semibold rounded-lg border',
+                      activeType === 'one-time'
+                        ? 'bg-[#EDF3E5] border-[#94C93D] text-[#94C93D]'
+                        : 'bg-white border-gray-200 text-black',
+                    ]"
                   >
                     One-time
                   </button>
                   <button
-                    class="text-[#153B35] px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold flex items-center gap-1 w-1/2 justify-center"
+                    @click="setActive('monthly')"
+                    :class="[
+                      'px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base w-1/2 font-semibold flex items-center gap-1 justify-center border rounded-lg',
+                      activeType === 'monthly'
+                        ? 'bg-[#EDF3E5] border-[#94C93D] text-[#94C93D] '
+                        : 'bg-white border-gray-200 text-black',
+                    ]"
                   >
                     <span class="text-lg sm:text-xl">❤️</span> Monthly
                   </button>
