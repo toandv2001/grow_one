@@ -157,7 +157,7 @@ onUnmounted(() => {
           class="w-full lg:w-2/3 h-full md:min-h-[608px] lg:min-h-[608px] md:w-[calc((2/3)*100%+200px)] my-auto bg-white flex justify-center items-center flex-col gap-6 px-0 md:px-0 py-4 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-10 md:mt-auto translate-x-0 2xl:translate-x-[100px] lg:px-4"
         >
           <div
-            class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-8 lg:gap-4 h-auto"
+            class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-8 lg:gap-4 h-auto p-4"
           >
             <div class="flex flex-col gap-4 xl:gap-8 lg:gap-4">
               <div
