@@ -677,47 +677,57 @@ onUnmounted(() => {
     <!-- section-5 -->
     <div class="bg-[#F4F1DC]" data-header-theme="green">
       <div
-        class="container mx-auto px-4 py-20 flex md:gap-[46px] gap-6 items-center flex-col"
+        class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 flex flex-col gap-10 lg:gap-12 xl:gap-14 items-center"
       >
-        <div class="flex items-center justify-center flex-col gap-4 w-full">
-          <p class="text-sm text-[#94C93D] font-normal">Forest</p>
-          <h3 class="text-3xl md:text-5xl font-bold text-center capitalize">
+        <div
+          class="flex items-center justify-center flex-col gap-3 sm:gap-4 md:gap-5 w-full"
+        >
+          <p
+            class="text-xs sm:text-sm md:text-base text-[#94C93D] font-normal uppercase"
+          >
+            Forest
+          </p>
+          <h3
+            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-center capitalize leading-tight sm:leading-normal"
+          >
             From one tree to a thriving community forest
           </h3>
-          <p class="text-[15px] text-[#475467] max-w-[917px] text-center px-2">
+          <p
+            class="text-sm sm:text-base md:text-lg lg:text-xl text-[#475467] max-w-full md:max-w-full text-center px-2 leading-relaxed"
+          >
             We restore native forests with local communities—reviving
             biodiversity, strengthening livelihoods, and stabilizing climate.<br />Inspired
             by the next generation, Grow One Future calls you to act now—with
-            transparent updates for our children’s future.
+            transparent updates for our children's future.
           </p>
         </div>
         <div
-          class="w-full min-h-[240px] md:min-h-[503px] rounded-3xl overflow-hidden"
+          class="w-full min-h-[200px] sm:min-h-[240px] md:min-h-[320px] lg:min-h-[400px] xl:min-h-[503px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg"
         >
-          <!-- <img
-            src="../assets/forest.png"
-            alt="forest"
-            class="w-full h-full object-cover"
-          />
-          <img
-            src="../assets/forest2.png"
-            alt="forest"
-            class="w-full h-full object-cover"
-          /> -->
           <home-section5
             :tree-count="treeCount"
             :handleChangeTreeCount="handleChangeTreeCount"
           />
         </div>
-        <div class="w-full flex justify-center items-center gap-4 flex-col">
-          <div class="flex justify-center items-center gap-2">
-            <p class="text-2xl font-semibold">{{ treeCount }}</p>
-            <img src="../assets/tree.png" alt="tree" />
+        <div
+          class="w-full flex justify-center items-center gap-3 sm:gap-4 md:gap-5 flex-col"
+        >
+          <div class="flex justify-center items-center gap-2 sm:gap-3">
+            <p
+              class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#153B35]"
+            >
+              {{ treeCount }}
+            </p>
+            <img
+              src="../assets/tree.png"
+              alt="tree"
+              class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+            />
           </div>
           <a
             id="donateBtnNav"
             href="#FUNGSLFMREB"
-            class="bg-[#9CCC3B] text-[#1A3635] px-6 py-3 rounded-full font-bold uppercase text-sm hover:bg-[#8BB835] transition-colors"
+            class="bg-[#9CCC3B] text-[#1A3635] px-4 sm:px-5 md:px-6 lg:px-7 xl:px-8 py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-full font-bold uppercase text-xs sm:text-sm md:text-base hover:bg-[#8BB835] transition-colors shadow-md hover:shadow-lg"
           >
             Donate Now
           </a>
@@ -732,25 +742,31 @@ onUnmounted(() => {
         class="w-full h-full absolute inset-0 object-cover z-20"
       />
       <div class="absolute inset-0 z-40 bg-black bg-opacity-70"></div>
-      <div class="relative z-50 w-full py-16 md:py-20">
+      <div
+        class="relative z-50 w-full py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28"
+      >
         <div
-          class="container px-4 h-full flex flex-col md:flex-row gap-4 md:gap-16 items-stretch md:items-center justify-between"
+          class="container px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 h-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-stretch lg:items-center justify-between"
         >
-          <div class="flex flex-col items-start gap-4 w-full md:w-1/2">
-            <div class="w-full flex items-start flex-col md:gap-4 md:w-[70%]">
+          <div
+            class="flex flex-col items-start gap-4 sm:gap-5 md:gap-6 w-full lg:w-1/2"
+          >
+            <div
+              class="w-full flex items-start flex-col gap-3 sm:gap-4 md:gap-5 lg:w-[75%] xl:w-[70%]"
+            >
               <p
-                class="text-xs md:text-sm font-normal text-[#94C93D] uppercase mb-1"
+                class="text-xs sm:text-sm md:text-base font-normal text-[#94C93D] uppercase mb-1"
               >
                 Take action
               </p>
               <h3
-                class="text-2xl md:text-5xl text-white font-bold uppercase mb-4 md:mb-2 md:leading-normal"
+                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white font-bold uppercase mb-3 sm:mb-4 md:mb-2 leading-tight sm:leading-normal md:leading-normal"
               >
                 A better future is calling
               </h3>
             </div>
             <p
-              class="text-sm md:text-base font-normal text-white leading-relaxed md:w-[87%]"
+              class="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-white leading-relaxed lg:w-[90%] xl:w-[87%]"
             >
               From one gift, we restore native forests with local
               communities-bringing wildlife bac, creating fair livehoods, and
@@ -759,31 +775,35 @@ onUnmounted(() => {
             </p>
           </div>
           <!-- form -->
-          <div class="w-full md:w-1/2 h-auto flex items-center md:justify-end">
-            <div class="w-full max-w-md">
-              <div class="bg-white p-6 rounded-lg shadow-lg w-full">
+          <div class="w-full lg:w-1/2 h-auto flex items-center lg:justify-end">
+            <div class="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
+              <div
+                class="bg-white p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 rounded-lg shadow-lg w-full"
+              >
                 <div
-                  class="flex justify-between mb-4 w-full border border-[#D0D5DD] rounded-lg overflow-hidden"
+                  class="flex justify-between mb-4 sm:mb-5 md:mb-6 w-full border border-[#D0D5DD] rounded-lg overflow-hidden"
                 >
                   <button
-                    class="text-[#94C93D] px-6 py-3 text-base w-1/2 bg-[#EDF3E5] border border-[#94C93D] font-semibold rounded-lg"
+                    class="text-[#94C93D] px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base w-1/2 bg-[#EDF3E5] border border-[#94C93D] font-semibold rounded-lg"
                   >
                     One-time
                   </button>
                   <button
-                    class="text-[#153B35] px-6 py-3 text-base font-semibold flex items-center gap-1 w-1/2 justify-center"
+                    class="text-[#153B35] px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold flex items-center gap-1 w-1/2 justify-center"
                   >
-                    <span class="text-xl">❤️</span> Monthly
+                    <span class="text-lg sm:text-xl">❤️</span> Monthly
                   </button>
                 </div>
                 <!-- Amount Buttons -->
-                <div class="grid grid-cols-3 gap-4 mb-4">
+                <div
+                  class="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6"
+                >
                   <button
                     v-for="amount in amounts"
                     :key="amount"
                     @click="handleAmountClick(amount)"
                     :class="[
-                      'px-4 py-3 rounded-lg border shadow-sm font-semibold transition-all',
+                      'px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 rounded-lg border shadow-sm font-semibold transition-all text-xs sm:text-sm md:text-base',
                       selectedAmount === amount
                         ? 'bg-[#94C93D] text-[#153B35] border-[#94C93D]'
                         : 'text-[#153B35] border-[#D0D5DD] hover:bg-gray-50',
@@ -792,10 +812,10 @@ onUnmounted(() => {
                     ${{ amount }}
                   </button>
                 </div>
-                <div class="mb-4 space-y-1.5">
+                <div class="mb-4 sm:mb-5 md:mb-6 space-y-1.5 sm:space-y-2">
                   <div class="relative">
                     <span
-                      class="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#667085] text-base font-medium"
+                      class="absolute left-3 sm:left-3.5 top-1/2 -translate-y-1/2 text-[#667085] text-sm sm:text-base font-medium"
                     >
                       $
                     </span>
@@ -805,10 +825,10 @@ onUnmounted(() => {
                       v-model="customAmount"
                       @input="handleCustomAmountChange"
                       min="1"
-                      class="w-full pl-9 pr-3.5 py-3 border border-[#D0D5DD] rounded-lg text-center text-[#667085] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#94C93D] focus:border-transparent"
+                      class="w-full pl-8 sm:pl-9 pr-3 sm:pr-3.5 py-2.5 sm:py-3 border border-[#D0D5DD] rounded-lg text-center text-[#667085] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#94C93D] focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
-                  <p class="text-left text-[#667085] text-sm">
+                  <p class="text-left text-[#667085] text-xs sm:text-sm">
                     Enter your donation amount.
                   </p>
                 </div>
@@ -816,7 +836,7 @@ onUnmounted(() => {
                   <a
                     href="#FUNGSLFMREB"
                     :data-amount="currentAmount"
-                    class="w-full bg-[#94C93D] text-center text-[#153B35] px-6 py-3 rounded-full font-semibold uppercase text-base border border-[#153B35] shadow-sm hover:bg-[#8BB835] transition-colors"
+                    class="w-full bg-[#94C93D] text-center text-[#153B35] px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-full font-semibold uppercase text-sm sm:text-base border border-[#153B35] shadow-sm hover:bg-[#8BB835] transition-colors"
                   >
                     DONATE NOW
                   </a>
@@ -831,23 +851,24 @@ onUnmounted(() => {
     <div class="bg-[#94C93D] w-full" data-header-theme="white">
       <div class="px-0 py-8 flex gap-[18px] items-center flex-col">
         <h3
-          class="font-bold text-2xl md:text-6xl text-center text-[#153B35] capitalize px-4"
+          class="font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-center text-[#153B35] capitalize px-4"
         >
           Out of partner
         </h3>
-        <div class="w-full px-6 md:px-28">
+        <div class="w-full px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
           <ClientOnly>
             <Swiper
               :modules="[Autoplay]"
-              :slides-per-view="3"
-              :space-between="36"
+              :slides-per-view="4"
+              :space-between="24"
               :loop="true"
               :autoplay="false"
               :breakpoints="{
-                640: { slidesPerView: 3, spaceBetween: 28 },
-                768: { slidesPerView: 4, spaceBetween: 32 },
-                1024: { slidesPerView: 5, spaceBetween: 40 },
-                1280: { slidesPerView: 6, spaceBetween: 44 },
+                640: { slidesPerView: 4, spaceBetween: 20 },
+                768: { slidesPerView: 4, spaceBetween: 24 },
+                1024: { slidesPerView: 5, spaceBetween: 28 },
+                1280: { slidesPerView: 6, spaceBetween: 32 },
+                1536: { slidesPerView: 7, spaceBetween: 36 },
               }"
               :centered-slides="false"
               class="partners-swiper w-full"
@@ -860,7 +881,9 @@ onUnmounted(() => {
                 <img
                   :src="partner.img"
                   :alt="partner.alt"
-                  class="w-[72px] md:w-[175px] h-full max-h-[120px] object-contain"
+                  loading="lazy"
+                  decoding="async"
+                  class="h-[56px] w-[72px] md:h-[64px] md:w-[80px] lg:h-[72px] lg:w-[88px] xl:h-[80px] xl:w-[96px] 2xl:h-[96px] 2xl:w-[112px] object-contain"
                 />
               </SwiperSlide>
             </Swiper>
@@ -876,14 +899,16 @@ onUnmounted(() => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="px-4 pt-16 md:pt-[100px] pb-10 md:pb-[164px] flex gap-8 items-start flex-col relative z-20"
+        class="container mx-auto pt-12 pb-6 md:py-10 lg:py-20 flex gap-6 lg:gap-10 items-start flex-col relative z-20"
       >
-        <div class="w-full flex flex-col items-start gap-4 container">
+        <div class="w-full flex flex-col items-start gap-4">
           <div class="w-full flex items-start flex-col gap-4">
             <p class="text-[#94C93D] text-sm uppercase font-normal">
               Make our mision grow
             </p>
-            <h3 class="text-3xl md:text-6xl font-bold capitalize">
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl 2xl:6xl font-bold capitalize"
+            >
               many ways to get involved
             </h3>
           </div>
@@ -907,10 +932,10 @@ onUnmounted(() => {
             </div>
           </div>
         </div>
-        <div class="container w-full pr-0">
+        <div class="container w-full px-0 2xl:pr-0">
           <div class="relative w-full h-[454px] md:h-[610px] mb-10">
             <div
-              class="absolute inset-y-0 -left-4 md:left-0 right-0 md:right-[calc(50%-49vw)] h-full"
+              class="absolute inset-y-0 left-0 right-0 md:right-[calc(50%-49vw)] h-full"
             >
               <ClientOnly>
                 <Swiper
@@ -993,7 +1018,7 @@ onUnmounted(() => {
         class="absolute top-0 left-0 w-full h-full object-contain"
       />
       <div
-        class="container mx-auto px-4 md:px-0 py-4 md:py-20 flex gap-10 items-start flex-col relative z-20"
+        class="container mx-auto py-4 md:py-10 lg:py-20 flex gap-6 lg:gap-10 items-start flex-col relative z-20"
       >
         <div class="w-full flex flex-col items-start gap-4">
           <div class="w-full flex items-start flex-col gap-4">
@@ -1003,7 +1028,9 @@ onUnmounted(() => {
             <div
               class="w-full flex gap-4 flex-col md:flex-row items-start md:items-end justify-start md:justify-between"
             >
-              <h3 class="text-3xl md:text-6xl font-bold capitalize">
+              <h3
+                class="text-3xl md:text-4xl lg:text-5xl 2xl:6xl font-bold capitalize"
+              >
                 Story of recovery & hope
               </h3>
               <div class="flex gap-2">
@@ -1023,7 +1050,7 @@ onUnmounted(() => {
         <div class="w-full relative">
           <!-- Left Navigation Button - Only visible on PC -->
           <button
-            class="section9-prev hidden md:flex absolute -left-16 top-1/2 -translate-y-1/2 z-10 bg-white rounded-lg shadow-lg p-3 hover:bg-gray-50 transition-colors cursor-pointer"
+            class="section9-prev hidden 2xl:flex absolute -left-16 top-1/2 -translate-y-1/2 z-10 bg-white rounded-lg shadow-lg p-3 hover:bg-gray-50 transition-colors cursor-pointer"
             aria-label="Previous story"
           >
             <svg
@@ -1083,7 +1110,7 @@ onUnmounted(() => {
 
           <!-- Right Navigation Button - Only visible on PC -->
           <button
-            class="section9-next hidden md:flex absolute -right-16 top-1/2 -translate-y-1/2 z-10 bg-white rounded-lg shadow-lg p-3 hover:bg-gray-50 transition-colors cursor-pointer"
+            class="section9-next hidden 2xl:flex absolute -right-16 top-1/2 -translate-y-1/2 z-10 bg-white rounded-lg shadow-lg p-3 hover:bg-gray-50 transition-colors cursor-pointer"
             aria-label="Next story"
           >
             <svg

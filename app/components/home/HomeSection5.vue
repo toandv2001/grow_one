@@ -1,9 +1,11 @@
 <template>
   <div class="">
-    <div class="w-full mx-auto h-[503px]">
+    <div
+      class="w-full mx-auto h-[200px] sm:h-[240px] md:h-[320px] lg:h-[400px] xl:h-[503px]"
+    >
       <div
         ref="containerRef"
-        class="relative w-full aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl cursor-col-resize select-none h-full"
+        class="relative w-full bg-gray-900 rounded-lg overflow-hidden shadow-2xl cursor-col-resize select-none h-full"
         @mousedown="handleMouseDown"
         @mouseup="handleMouseUp"
         @mousemove="handleMouseMove"
@@ -18,7 +20,7 @@
           <img
             :src="imageR"
             alt="After"
-            class="w-full object-cover h-[500px]"
+            class="w-full h-full object-cover"
             draggable="false"
           />
         </div>
@@ -45,18 +47,19 @@
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
             <div
-              class="relative gap-3 w-[120px] h-[48px] bg-white rounded-[8px] py-3 px-6 shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"
+              class="relative gap-2 sm:gap-3 w-[80px] sm:w-[100px] md:w-[120px] h-[36px] sm:h-[42px] md:h-[48px] bg-white rounded-[6px] sm:rounded-[8px] py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-105 sm:hover:scale-110 transition-transform"
             >
               <!-- Tree icon centered above the handle; pointer events disabled to avoid drag interference -->
               <img
                 :src="treeIcon"
                 alt="Tree icon"
-                class="absolute -top-12 left-1/2 -translate-x-1/2 w-9 h-9 pointer-events-none drop-shadow-md"
+                class="absolute -top-8 sm:-top-10 md:-top-12 left-1/2 -translate-x-1/2 w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 pointer-events-none drop-shadow-md"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                :width="16"
+                :height="16"
+                class="sm:w-5 sm:h-5 md:w-5 md:h-5"
                 viewBox="0 0 20 20"
                 fill="none"
               >
@@ -69,11 +72,15 @@
                 />
               </svg>
 
-              {{ calculatedTreeCount }}
+              <span
+                class="text-xs sm:text-sm md:text-base font-semibold text-[#153B35]"
+                >{{ calculatedTreeCount }}</span
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                :width="16"
+                :height="16"
+                class="sm:w-5 sm:h-5 md:w-5 md:h-5"
                 viewBox="0 0 20 20"
                 fill="none"
               >
@@ -92,9 +99,16 @@
         <!-- Display TreeCount -->
       </div>
 
-      <div class="mt-6 text-center text-gray-400 text-sm">
-        <p>Kéo thanh trượt hoặc click vào vị trí bất kỳ để so sánh ảnh</p>
-        <p class="mt-2">Vị trí slider: {{ Math.round(sliderPosition) }}%</p>
+      <div
+        class="mt-3 sm:mt-4 md:mt-6 text-center text-gray-400 text-xs sm:text-sm"
+      >
+        <p class="hidden sm:block">
+          Kéo thanh trượt hoặc click vào vị trí bất kỳ để so sánh ảnh
+        </p>
+        <p class="sm:hidden">Kéo để so sánh ảnh</p>
+        <p class="mt-1 sm:mt-2 text-xs">
+          Vị trí: {{ Math.round(sliderPosition) }}%
+        </p>
       </div>
     </div>
   </div>

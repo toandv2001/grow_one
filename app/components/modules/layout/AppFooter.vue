@@ -9,7 +9,9 @@
             <img src="../../../assets/logo.png" alt="" />
           </NuxtLink>
         </div>
-        <p class="text-white mb-4 text-sm leading-relaxed md:w-[420px]">
+        <p
+          class="text-white mb-4 text-sm leading-relaxed w-full md:w-full lg:w-[420px]"
+        >
           Grow One Future is a U.S. 501(c)(3) nonprofit organization pioneering
           a transparent and sustainable reforestation model that combines
           ecosystem restoration with community livelihood development.

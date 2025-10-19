@@ -5,30 +5,34 @@
       isGreenTheme ? 'bg-[#143A35] text-white' : 'bg-[#fff] shadow-md',
     ]"
   >
-    <div class="px-6 md:px-20 py-4 md:py-[14px] relative">
+    <div
+      class="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-3 sm:py-4 md:py-5 lg:py-6 relative"
+    >
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <NuxtLink to="/">
             <img
               src="../../../assets/logo/logo-light.svg"
               alt=""
-              class="w-[117px] md:w-auto h-[53px] md:h-auto"
+              class="w-[100px] sm:w-[110px] md:w-[120px] lg:w-[130px] xl:w-auto h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px] xl:h-auto"
               :hidden="isGreenTheme"
             />
             <img
               src="../../../assets/logo/logo-drak.svg"
               alt=""
-              class="w-[117px] md:w-auto h-[53px] md:h-auto"
+              class="w-[100px] sm:w-[110px] md:w-[120px] lg:w-[130px] xl:w-auto h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px] xl:h-auto"
               :hidden="!isGreenTheme"
             />
           </NuxtLink>
         </div>
 
-        <nav class="hidden lg:flex items-center space-x-12">
+        <nav
+          class="hidden lg:flex items-center space-x-8 xl:space-x-10 2xl:space-x-12"
+        >
           <NuxtLink
             to="#"
             :class="[
-              'transition-colors font-medium uppercase text-sm',
+              'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -39,7 +43,7 @@
           <NuxtLink
             to="#"
             :class="[
-              'transition-colors font-medium uppercase text-sm',
+              'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -50,7 +54,7 @@
           <NuxtLink
             to="#"
             :class="[
-              'transition-colors font-medium uppercase text-sm',
+              'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -61,7 +65,7 @@
           <NuxtLink
             to="#"
             :class="[
-              'transition-colors font-medium uppercase text-sm',
+              'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -72,7 +76,7 @@
           <NuxtLink
             to="#"
             :class="[
-              'transition-colors font-medium uppercase text-sm',
+              'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -83,7 +87,7 @@
           <NuxtLink
             to="#"
             :class="[
-              'transition-colors font-medium uppercase text-sm',
+              'transition-colors font-medium uppercase text-xs lg:text-sm xl:text-base',
               isGreenTheme
                 ? 'text-white hover:text-[#9CCC3B]'
                 : 'text-[#153B35] hover:text-[#9CCC3B]',
@@ -93,12 +97,12 @@
           </NuxtLink>
         </nav>
 
-        <div class="flex items-center">
+        <div class="flex items-center gap-2 sm:gap-3 md:gap-4">
           <a
             id="donateBtnNav"
             href="#FUNGSLFMREB"
             :class="[
-              'inline-block px-6 py-3 rounded-full font-semibold uppercase text-sm transition-colors',
+              'inline-block px-3 sm:px-4 md:px-5 lg:px-6 xl:px-7 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-full font-semibold uppercase text-xs sm:text-sm md:text-base transition-colors shadow-sm hover:shadow-md',
               isGreenTheme
                 ? 'bg-[#94C93B] text-[#153B35] hover:bg-[#8BB835]'
                 : 'bg-[#9CCC3B] text-[#1A3635] hover:bg-[#8BB835]',
@@ -108,12 +112,12 @@
           </a>
 
           <button
-            class="lg:hidden ml-4 p-2 hover:text-[#9CCC3B]"
+            class="lg:hidden p-1.5 sm:p-2 hover:text-[#9CCC3B] transition-colors"
             :class="isGreenTheme ? 'text-white' : 'text-[#153B35]'"
             @click="toggleMobileMenu"
           >
             <svg
-              class="w-6 h-6"
+              class="w-5 h-5 sm:w-6 sm:h-6"
               fill="none"
               :stroke="'currentColor'"
               viewBox="0 0 24 24"
@@ -156,47 +160,47 @@
       >
         <div
           v-if="isMobileMenuOpen"
-          class="lg:hidden origin-top overflow-hidden absolute left-0 right-0 top-full z-10 bg-[#143A3533] shadow-lg"
+          class="lg:hidden origin-top overflow-hidden absolute left-0 right-0 top-full z-10 bg-[#143A35] bg-opacity-95 backdrop-blur-sm shadow-lg"
         >
-          <nav class="py-4">
+          <nav class="py-3 sm:py-4">
             <NuxtLink
               to="#"
-              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              class="block px-4 sm:px-6 py-2.5 sm:py-3 text-white uppercase text-sm sm:text-base font-medium transition-all duration-300 ease-in-out hover:translate-x-2 hover:bg-white hover:bg-opacity-10"
               @click="closeMobileMenu"
             >
               Our Work
             </NuxtLink>
             <NuxtLink
               to="#"
-              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              class="block px-4 sm:px-6 py-2.5 sm:py-3 text-white uppercase text-sm sm:text-base font-medium transition-all duration-300 ease-in-out hover:translate-x-2 hover:bg-white hover:bg-opacity-10"
               @click="closeMobileMenu"
             >
               Get Involved
             </NuxtLink>
             <NuxtLink
               to="#"
-              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              class="block px-4 sm:px-6 py-2.5 sm:py-3 text-white uppercase text-sm sm:text-base font-medium transition-all duration-300 ease-in-out hover:translate-x-2 hover:bg-white hover:bg-opacity-10"
               @click="closeMobileMenu"
             >
               Transparency
             </NuxtLink>
             <NuxtLink
               to="#"
-              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              class="block px-4 sm:px-6 py-2.5 sm:py-3 text-white uppercase text-sm sm:text-base font-medium transition-all duration-300 ease-in-out hover:translate-x-2 hover:bg-white hover:bg-opacity-10"
               @click="closeMobileMenu"
             >
               About Us
             </NuxtLink>
             <NuxtLink
               to="#"
-              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              class="block px-4 sm:px-6 py-2.5 sm:py-3 text-white uppercase text-sm sm:text-base font-medium transition-all duration-300 ease-in-out hover:translate-x-2 hover:bg-white hover:bg-opacity-10"
               @click="closeMobileMenu"
             >
               About Tree
             </NuxtLink>
             <NuxtLink
               to="#"
-              class="block px-4 py-2 text-white uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-2"
+              class="block px-4 sm:px-6 py-2.5 sm:py-3 text-white uppercase text-sm sm:text-base font-medium transition-all duration-300 ease-in-out hover:translate-x-2 hover:bg-white hover:bg-opacity-10"
               @click="closeMobileMenu"
             >
               Gift Trees
