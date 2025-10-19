@@ -80,7 +80,7 @@ onUnmounted(() => {
         onerror="this.src='https://via.placeholder.com/1920x1080?text=Image+Not+Found'; console.error('Ảnh không load: Đường dẫn sai hoặc file missing!');"
       />
       <div
-        class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center w-[80%]"
+        class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center w-[80%] lg:w-[70%]"
       >
         <h1
           class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-6 capitalize leading-tight"
@@ -100,7 +100,7 @@ onUnmounted(() => {
           </span>
         </h1>
         <p
-          class="text-base md:text-2xl text-white mb-6 max-w-4xl mx-auto px-4 md:px-0"
+          class="text-base lg:text-xl xl:text-2xl text-white mb-6 max-w-4xl mx-auto px-4 md:px-0"
         >
           Facing a climate crisis, we’re planting a forest of solutions. Grow
           One Future restores ecosystems, empowers communities, and builds a
@@ -125,13 +125,13 @@ onUnmounted(() => {
         class="hidden md:block absolute inset-y-0 left-0 w-full 2xl:w-[730px] md:w-[500px] bg-[#94C93D]"
       ></div>
       <div
-        class="md:hidden absolute inset-x-0 top-0 h-[250px] bg-[#94C93D]"
+        class="md:hidden absolute inset-x-0 top-0 h-[250px] lg:h-[200px] bg-[#94C93D]"
       ></div>
       <div
-        class="container min-h-[608px] mx-auto my-auto px-4 flex flex-col md:flex-row gap-4 md:gap-10 relative z-10"
+        class="container min-h-[608px] px-0 mx-auto my-auto flex flex-col md:flex-row gap-4 md:gap-10 relative z-10"
         data-aos="fade-up"
       >
-        <div class="w-full h-full md:w-1/3 flex my-auto">
+        <div class="w-full h-full lg:w-1/3 flex my-auto px-4">
           <div
             class="flex justify-center items-start flex-col gap-1 w-full max-w-full md:max-w-[455px] mt-5 md:mt-0"
           >
@@ -139,13 +139,13 @@ onUnmounted(() => {
               our by 2050
             </p>
             <h2
-              class="text-2xl md:text-[60px] md:leading-[1.21] font-bold text-[#153B35] w-full"
+              class="text-2xl md:text-[60px] md:leading-[1.21] lg:text-[40px] font-bold text-[#153B35] w-full"
             >
               By 2050,We Grow One<br class="md:hidden" />
               Future
             </h2>
             <p
-              class="text-sm md:text-[16px] font-normal text-[#475467] mt-4 md:text-left"
+              class="text-sm md:text-[16px] lg:text-[14px] font-normal text-[#475467] mt-4 md:text-left"
             >
               By 2050, together with communities, Grow One Future will restore
               ecosystems, empower millions of families, and drive global climate
@@ -154,108 +154,116 @@ onUnmounted(() => {
           </div>
         </div>
         <div
-          class="w-full h-full md:min-h-[608px] md:w-[calc((2/3)*100%+200px)] my-auto bg-white flex justify-center items-center flex-col gap-6 h-full px-0 md:px-0 py-4 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-10 md:mt-auto translate-x-0 md:translate-x-[100px]"
+          class="w-full lg:w-2/3 h-full md:min-h-[608px] lg:min-h-[608px] md:w-[calc((2/3)*100%+200px)] my-auto bg-white flex justify-center items-center flex-col gap-6 px-0 md:px-0 py-4 md:py-12 rounded-2xl md:rounded-none md:shadow-none mt-10 md:mt-auto translate-x-0 2xl:translate-x-[100px] lg:px-4"
         >
           <div
-            class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 h-auto"
+            class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-4 h-auto"
           >
-            <div class="flex flex-col gap-4 md:gap-8">
+            <div class="flex flex-col gap-4 md:gap-8 lg:gap-4">
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card.png"
                   alt="card"
-                  class="w-[125px] h-full md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
                   >
                     1B
                   </h3>
-                  <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
+                  <p
+                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                  >
                     Trees
                   </p>
-                  <p class="text-base text-[#475467]">
+                  <p class="text-base lg:text-xs text-[#475467]">
                     Restored with native and economic species to revive
                     biodiversity.
                   </p>
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:max-w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card3.png"
                   alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
                   >
                     50
                   </h3>
-                  <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
+                  <p
+                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                  >
                     Countries
                   </p>
-                  <p class="text-base text-[#475467]">
+                  <p class="text-base lg:text-xs text-[#475467]">
                     Building the world’s largest community-led reforestation
                     network.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-8">
+            <div class="flex flex-col gap-4 md:gap-8 lg:gap-4">
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card2.png"
                   alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
                   >
                     10M
                   </h3>
-                  <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
+                  <p
+                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                  >
                     Families
                   </p>
-                  <p class="text-base text-[#475467]">
+                  <p class="text-base lg:text-xs text-[#475467]">
                     Lifted through sustainable forest-based livelihoods.
                   </p>
                 </div>
               </div>
               <div
-                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-6 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
+                class="w-full max-w-full md:w-[420px] h-auto flex gap-3 md:gap-2 lg:gap-2 bg-white shadow-[0_2px_18px_rgba(0,0,0,0.16)] mx-auto"
               >
                 <img
                   src="../assets/card4.png"
                   alt="card"
-                  class="w-[125px] h-[103px] md:w-[200px] md:h-[200px] object-cover flex-shrink-0 scale-[1.05]"
+                  class="w-[125px] h-full md:w-[120px] lg:w-[150px] lg:h-[150px] md:h-[120px] object-cover flex-shrink-0 scale-[1.05]"
                 />
                 <div
-                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-4 flex items-start gap-1 md:gap-2 flex-col"
+                  class="pl-0 pr-4 md:pl-0 md:pr-4 md:pt-1 flex items-start gap-1 md:gap-1 lg:gap-1 flex-col"
                 >
                   <h3
-                    class="text-base md:text-[40px] md:leading-[1.2] font-black text-[#153B35]"
+                    class="text-base lg:text-2xl md:leading-[1.2] font-black text-[#153B35]"
                   >
                     1B
                   </h3>
-                  <p class="text-sm md:text-[16px] font-bold text-[#153B35]">
+                  <p
+                    class="text-sm lg:text-[12px] lg:text-base font-bold text-[#153B35]"
+                  >
                     Tons of CO₂
                   </p>
-                  <p class="text-base text-[#475467]">
+                  <p class="text-base lg:text-xs text-[#475467]">
                     Captured to advance the global Net Zero pathway.
                   </p>
                 </div>
@@ -275,35 +283,35 @@ onUnmounted(() => {
       <img
         src="../assets/Section 9.png"
         alt=""
-        class="absolute md:top-0 top-[300px] left-0 w-full h-full md:object-cover object-contain"
+        class="absolute xl:top-0 top-[300px] lg:top-[35px] left-0 w-full h-full md:object-cover object-contain"
       />
       <div
-        class="container mx-auto px-4 md:pt-[160px] pb-32 md:pb-[295px] flex flex-col-reverse md:flex-row gap-8 md:gap-[140px] items-center"
+        class="container mx-auto px-4 xl:pt-[160px] lg:pt-[120px] pb-32 xl:pb-[295px] lg:pb-[160px] flex md:flex-row flex-col-reverse xl:flex-row gap-8 xl:gap-[140px] lg:gap-8 items-center"
       >
         <div
-          class="w-full md:w-1/2 flex justify-center items-center relative mt-0 md:-mt-40"
+          class="w-full xl:w-1/2 flex justify-center items-center relative mt-0 md:-mt-40 lg:mt-0"
         >
           <img
             src="../assets/vetinh1.png"
             alt="vetinh1"
-            class="w-8 h-8 md:w-auto md:h-auto block absolute top-[0px] left-[30px] md:top-[50px] md:left-[50px]"
+            class="w-8 h-8 xl:w-auto xl:h-auto block absolute top-[0px] left-[30px] xl:top-[50px] md:left-[50px] lg:top-0 lg:left-[30px]"
           />
           <img
             src="../assets/vetinh2.png"
             alt="vetinh2"
-            class="w-8 h-8 md:w-auto md:h-auto block absolute top-[300px] right-[60px] md:top-[350px] md:right-[40px]"
+            class="w-8 h-8 xl:w-auto xl:h-auto block absolute top-[300px] right-[60px] xl:top-[350px] xl:right-[40px] lg:top-[300px] lg:right-[60px]"
           />
           <CommonEarth />
         </div>
         <div
-          class="h-auto w-full md:w-[596px] flex items-start gap-6 md:gap-8 flex-col relative z-20"
+          class="h-auto w-full xl:w-[596px] lg:w-1/2 flex items-start gap-6 md:gap-8 lg:gap-4 flex-col relative z-20"
         >
           <div class="w-full flex items-start gap-4 flex-col">
             <p class="md:text-sm text-xs text-[#94C93D] uppercase">
               Who we are
             </p>
             <h3
-              class="font-bold md:text-[60px] capitalize text-2xl leading-normal"
+              class="font-bold md:text-[60px] lg:text-4xl capitalize text-2xl leading-normal"
             >
               Global Nonprofit Growing Forests, Livelihoods, and Climate
               Solutions
@@ -350,14 +358,16 @@ onUnmounted(() => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto px-4 py-10 md:py-20 flex flex-col gap-0 md:gap-16 items-center h-auto relative z-20"
+        class="container mx-auto px-4 py-10 md:py-20 lg:py-10 flex flex-col gap-0 md:gap-16 lg:gap-4 items-center h-auto relative z-20"
         data-aos="fade-up"
         data-aos-duration="1200"
         data-aos-delay="200"
       >
         <div class="w-full flex flex-col items-center justify-center gap-4">
           <p class="md:text-sm text-xs text-[#94C93D] uppercase">our pillars</p>
-          <h3 class="font-bold md:text-6xl text-2xl text-white capitalize">
+          <h3
+            class="font-bold md:text-6xl lg:text-4xl text-2xl text-white capitalize"
+          >
             Forest - people - future
           </h3>
         </div>
@@ -369,7 +379,7 @@ onUnmounted(() => {
             :breakpoints="{
               640: { slidesPerView: 2, spaceBetween: 20 },
               768: { slidesPerView: 2, spaceBetween: 20, pagination: false },
-              1024: { slidesPerView: 3, spaceBetween: 24, pagination: false },
+              1024: { slidesPerView: 3, spaceBetween: 20, pagination: false },
               1280: { slidesPerView: 3, spaceBetween: 24, pagination: false },
             }"
             :pagination="{ clickable: true }"
@@ -382,7 +392,7 @@ onUnmounted(() => {
               data-aos-delay="200"
             >
               <div
-                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
+                class="bg-white w-full md:min-h-[654px] min-h-[568px] lg:min-h-[568px] rounded-3xl p-6 lg:p-4 flex items-center flex-col gap-4 lg:gap-2 relative overflow-hidden"
               >
                 <div class="w-full flex items-start">
                   <img
@@ -394,14 +404,14 @@ onUnmounted(() => {
                 <div class="w-full flex flex-col items-start gap-2">
                   <h4 class="text-2xl font-bold text-[#153B35]">Forests</h4>
                   <div
-                    class="flex w-full items-start flex-col gap-3 md:min-h-[150px]"
+                    class="flex w-full items-start flex-col gap-3 lg:gap-2 md:min-h-[150px] lg:min-h-[140px]"
                   >
-                    <p class="text-base font-normal text-[#475467]">
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
                       Restore native ecosysstems with climate-resilient and
                       science-based planting. Bring back biodiversity, protect
                       water & soil, and create climate buffers for communities
                     </p>
-                    <p class="text-base font-normal text-[#475467]">
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
                       Your $1 helps a seed become a forest for future
                       generations.
                     </p>
@@ -418,7 +428,7 @@ onUnmounted(() => {
                   </div>
                 </div>
                 <div
-                  class="absolute bottom-[-20px] md:h-[319px] h-[263px] w-full z-30"
+                  class="absolute bottom-[-20px] md:h-[319px] h-[250px] lg:h-[270px] w-full z-30"
                 >
                   <img
                     src="../assets/forests_img.png"
@@ -435,10 +445,10 @@ onUnmounted(() => {
             <SwiperSlide
               data-aos="fade-up"
               data-aos-duration="1200"
-              data-aos-delay="400"
+              data-aos-delay="200"
             >
               <div
-                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
+                class="bg-white w-full md:min-h-[654px] min-h-[568px] lg:min-h-[568px] rounded-3xl p-6 lg:p-4 flex items-center flex-col gap-4 lg:gap-2 relative overflow-hidden"
               >
                 <div class="w-full flex items-start">
                   <img
@@ -448,17 +458,18 @@ onUnmounted(() => {
                   />
                 </div>
                 <div class="w-full flex flex-col items-start gap-2">
-                  <h4 class="text-2xl font-bold text-[#153B35]">People</h4>
+                  <h4 class="text-2xl font-bold text-[#153B35]">Forests</h4>
                   <div
-                    class="flex w-full items-start flex-col gap-3 md:min-h-[150px]"
+                    class="flex w-full items-start flex-col gap-3 lg:gap-2 md:min-h-[150px] lg:min-h-[140px]"
                   >
-                    <p class="text-base font-normal text-[#475467]">
-                      Provite sustainable livelihoods through agroforestry:
-                      native forests + income crops. Families become forest
-                      guardians-protecting what also sustians thems.
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
+                      Restore native ecosysstems with climate-resilient and
+                      science-based planting. Bring back biodiversity, protect
+                      water & soil, and create climate buffers for communities
                     </p>
-                    <p class="text-base font-normal text-[#475467]">
-                      Every tree you fund creates work, dignity, and hope.
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
+                      Your $1 helps a seed become a forest for future
+                      generations.
                     </p>
                   </div>
                 </div>
@@ -473,16 +484,16 @@ onUnmounted(() => {
                   </div>
                 </div>
                 <div
-                  class="absolute bottom-[-20px] md:h-[319px] h-[263px] w-full z-30"
+                  class="absolute bottom-[-20px] md:h-[319px] h-[250px] lg:h-[270px] w-full z-30"
                 >
                   <img
-                    src="../assets/people_img.png"
+                    src="../assets/forests_img.png"
                     alt="Forests image"
-                    class="w-full h-full object-cover"
                     loading="lazy"
+                    class="w-full h-full object-cover"
                   />
                   <div
-                    class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,0.3)_30%,rgba(255,255,255,0.1)_70%,rgba(255,255,255,0)_100%)]"
+                    class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,0.3)_30%,rgba(255,255,255,0.1)_90%,rgba(255,255,255,0)_100%)]"
                   ></div>
                 </div>
               </div>
@@ -490,10 +501,10 @@ onUnmounted(() => {
             <SwiperSlide
               data-aos="fade-up"
               data-aos-duration="1200"
-              data-aos-delay="600"
+              data-aos-delay="200"
             >
               <div
-                class="bg-white w-full md:min-h-[654px] min-h-[568px] rounded-3xl p-6 flex items-center flex-col gap-4 relative overflow-hidden"
+                class="bg-white w-full md:min-h-[654px] min-h-[568px] lg:min-h-[568px] rounded-3xl p-6 lg:p-4 flex items-center flex-col gap-4 lg:gap-2 relative overflow-hidden"
               >
                 <div class="w-full flex items-start">
                   <img
@@ -503,22 +514,22 @@ onUnmounted(() => {
                   />
                 </div>
                 <div class="w-full flex flex-col items-start gap-2">
-                  <h4 class="text-2xl font-bold text-[#153B35]">Future</h4>
+                  <h4 class="text-2xl font-bold text-[#153B35]">Forests</h4>
                   <div
-                    class="flex w-full items-start flex-col gap-3 md:min-h-[150px]"
+                    class="flex w-full items-start flex-col gap-3 lg:gap-2 md:min-h-[150px] lg:min-h-[140px]"
                   >
-                    <p class="text-base font-normal text-[#475467]">
-                      See your impact with transparant technology-GPS, photo,
-                      and growth update.<br />
-                      Join a global community of donors & changemakers building
-                      a livable future.
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
+                      Restore native ecosysstems with climate-resilient and
+                      science-based planting. Bring back biodiversity, protect
+                      water & soil, and create climate buffers for communities
                     </p>
-                    <p class="text-base font-normal text-[#475467]">
-                      Together we ensure people and planet thrive
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
+                      Your $1 helps a seed become a forest for future
+                      generations.
                     </p>
                   </div>
                 </div>
-                <div class="w-full flex items-start pt-3">
+                <div class="w-full flex items-start pt-1">
                   <p class="text-base font-semibold text-[#94C93D]">Donation</p>
                   <div class="flex justify-center items-center p-[2px]">
                     <img
@@ -529,16 +540,16 @@ onUnmounted(() => {
                   </div>
                 </div>
                 <div
-                  class="absolute bottom-[-20px] md:h-[319px] h-[263px] w-full z-30"
+                  class="absolute bottom-[-20px] md:h-[319px] h-[250px] lg:h-[270px] w-full z-30"
                 >
                   <img
-                    src="../assets/future_img.png"
+                    src="../assets/forests_img.png"
                     alt="Forests image"
-                    class="w-full h-full object-cover"
                     loading="lazy"
+                    class="w-full h-full object-cover"
                   />
                   <div
-                    class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,0.3)_30%,rgba(255,255,255,0.1)_70%,rgba(255,255,255,0)_100%)]"
+                    class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,0.3)_30%,rgba(255,255,255,0.1)_90%,rgba(255,255,255,0)_100%)]"
                   ></div>
                 </div>
               </div>
@@ -561,14 +572,14 @@ onUnmounted(() => {
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
-        class="container mx-auto pt-16 md:pt-[100px] pb-16 md:pb-[164px] flex gap-9 items-start flex-col relative z-20"
+        class="container mx-auto pt-16 md:pt-[100px] lg:pt-[60px] pb-16 md:pb-[164px] flex gap-9 lg:gap-4 items-start flex-col relative z-20"
       >
-        <div class="w-full flex flex-col items-start gap-4">
+        <div class="w-full flex flex-col items-start gap-4 lg:gap-2">
           <div class="w-full flex items-start flex-col gap-4">
             <p class="text-[#94C93D] text-sm uppercase font-normal">
               why this work
             </p>
-            <h3 class="text-3xl md:text-6xl font-bold capitalize">
+            <h3 class="text-3xl md:text-6xl lg:text-4xl font-bold capitalize">
               Restore Nature. grow prosperity. fight climate change.
             </h3>
           </div>

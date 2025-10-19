@@ -75,9 +75,9 @@ function handleClick(ev: MouseEvent): void {
 
 <template>
   <div
-    class="relative w-full max-w-sm md:max-w-none flex justify-center items-center"
+    class="relative w-full max-w-sm xl:max-w-none flex justify-center items-center"
   >
-    <div class="relative w-[320px] md:w-[442px] aspect-square">
+    <div class="relative w-[320px] xl:w-[442px] lg:w-[350px] aspect-square">
       <div
         ref="containerRef"
         class="relative w-full h-full rounded-full overflow-hidden bg-white border-[10px] md:border-[12px] border-[#E5E9EE] shadow-[0_0_40px_rgba(0,0,0,0.15)]"
