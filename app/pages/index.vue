@@ -404,12 +404,15 @@ onUnmounted(() => {
                 <div class="w-full flex flex-col items-start gap-2">
                   <h4 class="text-2xl font-bold text-[#153B35]">Forests</h4>
                   <div
-                    class="flex w-full items-start flex-col gap-3 lg:gap-2 md:min-h-[150px] lg:min-h-[140px]"
+                    class="flex w-full items-start flex-col gap-3 lg:gap-1 md:min-h-[150px] lg:min-h-[140px]"
                   >
                     <p class="text-base lg:text-sm font-normal text-[#475467]">
                       Restore native ecosysstems with climate-resilient and
-                      science-based planting. Bring back biodiversity, protect
-                      water & soil, and create climate buffers for communities
+                      science-based planting.
+                    </p>
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
+                      Bring back biodiversity, protect water & soil, and create
+                      climate buffers for communities
                     </p>
                     <p class="text-base lg:text-sm font-normal text-[#475467]">
                       Your $1 helps a seed become a forest for future
@@ -458,18 +461,20 @@ onUnmounted(() => {
                   />
                 </div>
                 <div class="w-full flex flex-col items-start gap-2">
-                  <h4 class="text-2xl font-bold text-[#153B35]">Forests</h4>
+                  <h4 class="text-2xl font-bold text-[#153B35]">People</h4>
                   <div
-                    class="flex w-full items-start flex-col gap-3 lg:gap-2 md:min-h-[150px] lg:min-h-[140px]"
+                    class="flex w-full items-start flex-col gap-3 lg:gap-1 md:min-h-[150px] lg:min-h-[140px]"
                   >
                     <p class="text-base lg:text-sm font-normal text-[#475467]">
-                      Restore native ecosysstems with climate-resilient and
-                      science-based planting. Bring back biodiversity, protect
-                      water & soil, and create climate buffers for communities
+                      Provite sustainable livelihoods through agroforestry:
+                      native forests + income crops.
                     </p>
                     <p class="text-base lg:text-sm font-normal text-[#475467]">
-                      Your $1 helps a seed become a forest for future
-                      generations.
+                      Families become forest guardians-protecting what also
+                      sustians thems.
+                    </p>
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
+                      Every tree you fund creates work, dignity, and hope.
                     </p>
                   </div>
                 </div>
@@ -487,7 +492,7 @@ onUnmounted(() => {
                   class="absolute bottom-[-20px] md:h-[319px] h-[250px] lg:h-[270px] w-full z-30"
                 >
                   <img
-                    src="../assets/forests_img.png"
+                    src="../assets/people_img.png"
                     alt="Forests image"
                     loading="lazy"
                     class="w-full h-full object-cover"
@@ -514,18 +519,20 @@ onUnmounted(() => {
                   />
                 </div>
                 <div class="w-full flex flex-col items-start gap-2">
-                  <h4 class="text-2xl font-bold text-[#153B35]">Forests</h4>
+                  <h4 class="text-2xl font-bold text-[#153B35]">Future</h4>
                   <div
-                    class="flex w-full items-start flex-col gap-3 lg:gap-2 md:min-h-[150px] lg:min-h-[140px]"
+                    class="flex w-full items-start flex-col gap-3 lg:gap-1 md:min-h-[150px] lg:min-h-[140px]"
                   >
                     <p class="text-base lg:text-sm font-normal text-[#475467]">
-                      Restore native ecosysstems with climate-resilient and
-                      science-based planting. Bring back biodiversity, protect
-                      water & soil, and create climate buffers for communities
+                      See your impact with transparant technology-GPS, photo,
+                      and growth update.
                     </p>
                     <p class="text-base lg:text-sm font-normal text-[#475467]">
-                      Your $1 helps a seed become a forest for future
-                      generations.
+                      Join a global community of donors & changemakers building
+                      a livable future.
+                    </p>
+                    <p class="text-base lg:text-sm font-normal text-[#475467]">
+                      Together we ensure people and planet thrive
                     </p>
                   </div>
                 </div>
@@ -543,7 +550,7 @@ onUnmounted(() => {
                   class="absolute bottom-[-20px] md:h-[319px] h-[250px] lg:h-[270px] w-full z-30"
                 >
                   <img
-                    src="../assets/forests_img.png"
+                    src="../assets/future_img.png"
                     alt="Forests image"
                     loading="lazy"
                     class="w-full h-full object-cover"
